@@ -1,20 +1,22 @@
 // main component
 
 import { useState } from "react";
-
+import { useTransition, animated, config } from "react-spring";
 import axios from "axios";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
+// styles
 import {
   Wrapper,
   TitleContent,
   AnimatedTitle,
   AnimatedCarousel,
 } from "./Main.styles";
-import { useTransition, animated, config } from "react-spring";
 
 // components
 import AnimatedMainContent from "../AnimatedMainContent/AnimatedMainContent";
 import BottomFade from "../BottomFade/BottomFade";
+import SignupModalInspired from "../SignupModalInspired/SignupModalInspired";
 
 const Main = () => {
   const listOfItems = [
@@ -65,7 +67,7 @@ const Main = () => {
   const transitions = useTransition(index, {
     from: { opacity: 0, transform: "translate3d(0, 50%, 0)", delay: 800 },
     enter: { opacity: 1, transform: "translate3d(0, 0px, 0)", delay: 2500 },
-    leave: { opacity: 0, transform: "translate3d(0, -50px, 0)", delay: 4000 },
+    leave: { opacity: 0, transform: "translate3d(0, -50px, 0)", delay: 2250 },
     // trail: 100,
     config: { config: config.slow, duration: 500 },
     exitBeforeEnter: true,
@@ -74,40 +76,59 @@ const Main = () => {
 
   return (
     <Wrapper>
-      <div className="main">
-        <TitleContent>
-          <div className="main-title-content">
-            <div className="home-main-title">
-              <h1>Get your next</h1>
-            </div>
-            <AnimatedTitle>
-              {transitions((style, index) => {
-                const item = listOfItems[index];
-                return <animated.div style={style}>{item}</animated.div>;
-              })}
-            </AnimatedTitle>
+      <Parallax pages={2} style={{ top: 0, left: 0 }}>
+        <ParallaxLayer offset={0} speed={0.5}>
+          <div className="main">
+            <TitleContent>
+              <div className="main-title-content">
+                <div className="home-main-title">
+                  <h1>Get your next</h1>
+                </div>
+                <AnimatedTitle>
+                  {transitions((style, index) => {
+                    const item = listOfItems[index];
+                    return <animated.div style={style}>{item}</animated.div>;
+                  })}
+                </AnimatedTitle>
 
-            <AnimatedCarousel>
-              <ul>
-                <li>
-                  <button className={item === 0 ? "dot-1" : "dot-0"}></button>
-                </li>
-                <li>
-                  <button className={item === 1 ? "dot-2" : "dot-0"}></button>
-                </li>
-                <li>
-                  <button className={item === 2 ? "dot-3" : "dot-0"}></button>
-                </li>
-                <li>
-                  <button className={item === 3 ? "dot-4" : "dot-0"}></button>
-                </li>
-              </ul>
-            </AnimatedCarousel>
+                <AnimatedCarousel>
+                  <ul>
+                    <li>
+                      <button
+                        className={item === 0 ? "dot-1" : "dot-0"}
+                      ></button>
+                    </li>
+                    <li>
+                      <button
+                        className={item === 1 ? "dot-2" : "dot-0"}
+                      ></button>
+                    </li>
+                    <li>
+                      <button
+                        className={item === 2 ? "dot-3" : "dot-0"}
+                      ></button>
+                    </li>
+                    <li>
+                      <button
+                        className={item === 3 ? "dot-4" : "dot-0"}
+                      ></button>
+                    </li>
+                  </ul>
+                </AnimatedCarousel>
+              </div>
+            </TitleContent>
+            <AnimatedMainContent
+              index={index}
+              setIndex={setIndex}
+              items={items}
+            />
+            <BottomFade />
           </div>
-        </TitleContent>
-        <AnimatedMainContent index={index} setIndex={setIndex} items={items} />
-        <BottomFade/>
-      </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={1} speed={0}>
+          <SignupModalInspired />
+        </ParallaxLayer>
+      </Parallax>
     </Wrapper>
   );
 };
