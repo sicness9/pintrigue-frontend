@@ -106,7 +106,7 @@ const SignupModalInspired = () => {
                           </div>
                         </form>
                         <p className="other-options">OR</p>
-                        <div>
+                        <div className="active-account-container">
                           <button className="already-have-account-button">
                             Already a member? Log in
                           </button>

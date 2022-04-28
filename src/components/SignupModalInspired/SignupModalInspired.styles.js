@@ -413,12 +413,23 @@ export const SignupModalInspiredStyle = styled.div`
                   }
                 }
 
-                .already-have-account-button {
-                  margin-top: 10px;
-                  box-sizing: border-box;
-                  display: block;
+                .active-account-container {
+                  display: flex;
+                  justify-content: center;
 
-                  
+                  .already-have-account-button {
+                    margin-top: 10px;
+                    box-sizing: border-box;
+                    display: block;
+                    background: none;
+                    border: none;
+                    text-align: left;
+                    color: rgb(51, 51, 51);
+                    margin-left: 5px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    line-height: normal;
+                  }
                 }
               }
             }
