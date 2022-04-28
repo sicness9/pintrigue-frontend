@@ -2,27 +2,50 @@ import styled from "styled-components";
 import { animated } from "react-spring";
 
 export const Wrapper = styled.div`
-  padding: 0 5px;
-  align-items: center;
+  overflow: hidden visible;
+  box-sizing: border-box;
+  display: block;
   overflow: hidden;
 
-  .main {
-    height: 100%;
-    width: 100%;
-    top: 80px;
-    align-content: center;
-    justify-content: center;
+  .page-container {
+    box-sizing: border-box;
+    display: block;
     overflow: hidden;
+
+    .fullpage {
+      height: 100%;
+      display: block;
+      overflow: hidden;
+
+      .fullpage-wrapper {
+        box-sizing: border-box;
+        display: block;
+        overflow: hidden;
+
+        .main {
+          height: 100vh;
+          width: 100%;
+          top: 80px;
+          align-content: center;
+          justify-content: center;
+          overflow: hidden visible;
+          box-sizing: border-box;
+          background-color: #fff;
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
   }
 `;
 
 export const TitleContent = styled.div`
+  height: calc(30vh + 140px);
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: flex-end;
   flex-direction: column;
-  height: 30%;
   margin-top: 0;
   margin-bottom: 0;
   overflow: hidden;
@@ -31,6 +54,7 @@ export const TitleContent = styled.div`
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 
     h1 {
       display: block;
@@ -47,6 +71,7 @@ export const AnimatedTitle = styled(animated.div)`
   margin: 2px;
   font-weight: 600;
   text-align: center;
+  overflow: hidden;
 
   p {
     margin: 0;
@@ -137,7 +162,6 @@ export const AnimatedCarousel = styled.div`
       margin: 6px;
       display: inline-block;
       cursor: pointer;
-
     }
 
     .dot-4 {
