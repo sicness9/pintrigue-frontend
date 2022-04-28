@@ -2,18 +2,28 @@ import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 
 export const Wrapper = styled.div`
-  padding: 0 5px;
+  width: 100%;
+  z-index: 999;
+  box-sizing: border-box;
+  top: 0;
+  position: fixed;
+  display: block;
 `;
 
 export const Content = styled.nav`
   .nav-bar {
+    height: 80px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    width: 100%;
-    z-index: 1;
-
+    box-sizing: border-box;
+    background-color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    flex-direction: row;
     .logo-nav {
       display: flex;
       align-items: center;
