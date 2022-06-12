@@ -2,13 +2,27 @@
 
 import { useRef, useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
+import { Link } from "react-router-dom";
 
+// components
+import ModalUnauthedView from "../ModalUnauthedView/ModalUnauthedView";
+import ModalLoginPage from "../ModalLoginPage/ModalLoginPage";
+import SignupModalInspired from "../SignupModalInspired/SignupModalInspired";
+import ModalSignUpView from "../ModalSignupView/ModalSignupView";
+
+// styles
 import { AnimatedModal, Content } from "./Modal.styles";
 
+// icons
 import logo from "../../images/logo.svg";
+
+// context
+import { UserContext } from "../../Context/userContext";
 
 const Modal = (props) => {
   const ref = useRef(null);
+  const [isSignIn, setIsSignIn] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -33,26 +47,35 @@ const Modal = (props) => {
     <Content>
       {props.open && (
         <div className="modal">
-          <AnimatedModal style={animateModal} ref={ref}>
-            <animated.div className="modal-box">
-              <div className="modal-top-content">
-                <img className="-modal-logo" src={logo} alt="logo" />
-                <h1>Welcome back, User!</h1>
-                <h2>Image will be there</h2>
-                <button>Log in</button>
-              </div>
-              <div>
-                <hr />
-              </div>
-              <div className="modal-bottom-content">
-                <div className="login-switch-account">
-                  <a href="#">Not you? Log in with different account</a>
-                </div>
-                <div className="login-sign-up">
-                  <a href="#">Don't have an account? Sign up</a>
-                </div>
-              </div>
-            </animated.div>
+          <AnimatedModal style={animateModal}>
+            {!isSignIn && !isSignup && (
+              <ModalUnauthedView
+                isSignIn={isSignIn}
+                setIsSignIn={setIsSignIn}
+                isSignup={isSignup}
+                setIsSignup={setIsSignup}
+                ref={ref}
+                setOpen={props.setOpen}
+              />
+            )}
+            {isSignIn && (
+              <ModalLoginPage
+                setOpen={props.setOpen}
+                isSignIn={isSignIn}
+                setIsSignIn={setIsSignIn}
+                isSignup={isSignup}
+                setIsSignup={setIsSignup}
+              />
+            )}
+            {isSignup && (
+              <ModalSignUpView
+                setOpen={props.setOpen}
+                isSignIn={isSignIn}
+                setIsSignIn={setIsSignIn}
+                isSignup={isSignup}
+                setIsSignup={setIsSignup}
+              />
+            )}
           </AnimatedModal>
         </div>
       )}

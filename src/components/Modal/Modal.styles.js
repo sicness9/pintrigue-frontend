@@ -24,9 +24,12 @@ export const Content = styled.div`
 
 export const AnimatedModal = styled(animated.div)`
   position: absolute;
-  width: 375px;
-  height: 400px;
-  padding: 32px 0px;
+  min-width: 375px;
+  max-width: 480px;
+  width: 50%;
+  height: 60%;
+  min-height: 400px;
+  max-height: 63opx;
   margin: auto;
   top: 50%;
   left: 50%;
@@ -35,7 +38,7 @@ export const AnimatedModal = styled(animated.div)`
   width: 400;
   background-color: #ffffff;
   border: 0.5px solid black;
-  border-radius: 8px;
+  border-radius: 32px;
   box-shadow: rgb(0, 0, 0, 0.5) 0px 2px 10px;
   padding: 4;
   text-align: center;
@@ -57,15 +60,22 @@ export const AnimatedModal = styled(animated.div)`
       margin-bottom: 12px;
     }
 
-    button {
-      width: 80%;
-      height: 40px;
-      border-radius: 20px;
-      border: none;
-      margin-bottom: 12px;
-      background-color: var(--primary-color);
-      color: white;
-      font-weight: bold;
+    .login-link {
+      text-decoration: none;
+
+      .login-button {
+        padding: 8px 10px 8px 10px;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 12px;
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: bold;
+
+        &:hover {
+          background-color: var(--colorRedHovered);
+        }
+      }
     }
   }
 
