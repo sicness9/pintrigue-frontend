@@ -61,10 +61,10 @@ const AccountOptionsFlyout = (props) => {
                                           >
                                             <text
                                               className="user-initial"
-                                              font-size="40px"
+                                              fontSize="40px"
                                               fill="#111"
                                               dy="0.35em"
-                                              text-anchor="middle"
+                                              textAnchor="middle"
                                             >
                                               N
                                             </text>
@@ -94,7 +94,7 @@ const AccountOptionsFlyout = (props) => {
                           </div>
                         </div>
                         <div className="check-image-container">
-                          <img src={checkMark}></img>
+                          <img src={checkMark} alt="checkmark menu icon"></img>
                         </div>
                       </div>
                     </div>
