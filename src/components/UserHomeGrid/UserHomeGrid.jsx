@@ -1,11 +1,5 @@
-import useMeasure from "react-use-measure";
-import React, { useState, useEffect, useMemo } from "react";
-import { useTransition, animated } from "react-spring";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-// hooks
-import useMedia from "../../hooks/useMedia";
-import { useFetchPins } from "../../hooks/useFetchPins";
 
 // components
 import Pin from "../Pin/Pin";
@@ -13,19 +7,11 @@ import Pin from "../Pin/Pin";
 // styles
 import { AnimatedGrid } from "./UserHomeGrid.styles";
 
-const UserHomeGrid = () => {
-  // const data = useFetchPins();
+const UserHomeGrid = (props) => {
   const [items, set] = useState([]); // Data will be the query I run to get the data
   const [category, setCategory] = useState("");
   const [posted_by, setPosted_by] = useState("");
   let page = 0;
-
-  // console.log("Received data: ", data);
-
-  // useEffect(() => {
-  //   const pins = Array.from(data);
-  //   set(pins);
-  // }, [data]);
 
   console.log("Data:", items);
 
