@@ -5,14 +5,27 @@ import { PinStyles } from "./Pin.styles";
 const Pin = (props) => {
   return (
     <PinStyles>
-      <div className="home-pin">
-        <div className="pin-height-controller">
+      <div
+        className="home-pin"
+        style={{
+          height: props.height,
+          width: props.width,
+        }}
+      >
+        <div
+          className="pin-height-controller"
+          style={{
+            height: props.height,
+            width: props.width,
+          }}
+        >
           <div
             className="pin"
             role="img"
             style={{
               backgroundImage: `url(${props.image_id.url})`,
-              aspectRatio: "236/355",
+              height: props.height,
+              width: props.width,
             }}
           ></div>
         </div>
