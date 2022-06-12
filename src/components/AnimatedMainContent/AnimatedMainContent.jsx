@@ -152,335 +152,313 @@ const AnimatedMainContent = (props) => {
 
   return (
     <AnimatedMainContentStyles>
-      <animated.div>
-        <div className="main-content-container">
-          <div className="column-container">
-            <div className="presentation">
-              <div
-                className="home-pin-container all-pins"
-                style={{ marginTop: "0px" }}
-              >
-                {homePinTransition((style, index) => {
-                  const item = listOfCategories[index];
-                  return (
-                    <animated.div style={style} className="home-page-usecase">
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}1.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}2.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}3.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}4.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}5.webp`,
-                          }}
-                        />
-                      </Suspense>
-                    </animated.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="column-container">
-            <div className="presentation">
-              <div
-                className="home-pin-container all-pins"
-                style={{ marginTop: "160px" }}
-              >
-                {homePinTransition2((style, index) => {
-                  const item = listOfCategories[index];
-                  return (
-                    <animated.div
-                      style={style}
-                      className="home-page-food-usecase"
-                    >
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}6.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}7.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}8.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}9.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}10.webp`,
-                          }}
-                        />
-                      </Suspense>
-                    </animated.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="column-container">
-            <div className="presentation">
-              <div
-                className="home-pin-container all-pins"
-                style={{ marginTop: "240px" }}
-              >
-                {homePinTransition3((style, index) => {
-                  const item = listOfCategories[index];
-                  return (
-                    <animated.div
-                      style={style}
-                      className="home-page-food-usecase"
-                    >
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}11.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}12.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}13.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}14.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}15.webp`,
-                          }}
-                        />
-                      </Suspense>
-                    </animated.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="column-container">
-            <div className="presentation">
-              <div
-                className="home-pin-container all-pins"
-                style={{ marginTop: "400px" }}
-              >
-                {homePinTransition4((style, index) => {
-                  const item = listOfCategories[index];
-                  return (
-                    <animated.div
-                      style={style}
-                      className="home-page-food-usecase"
-                    >
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}16.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}17.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}18.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}19.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}20.webp`,
-                          }}
-                        />
-                      </Suspense>
-                    </animated.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="column-container">
-            <div className="presentation">
-              <div
-                className="home-pin-container all-pins"
-                style={{ marginTop: "240px" }}
-              >
-                {homePinTransition5((style, index) => {
-                  const item = listOfCategories[index];
-                  return (
-                    <animated.div
-                      style={style}
-                      className="home-page-food-usecase"
-                    >
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}21.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}22.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}23.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}24.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}25.webp`,
-                          }}
-                        />
-                      </Suspense>
-                    </animated.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="column-container">
-            <div className="presentation">
-              <div
-                className="home-pin-container all-pins"
-                style={{ marginTop: "160px" }}
-              >
-                {homePinTransition6((style, index) => {
-                  const item = listOfCategories[index];
-                  return (
-                    <animated.div
-                      style={style}
-                      className="home-page-food-usecase"
-                    >
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}26.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}27.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}28.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}29.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}30.webp`,
-                          }}
-                        />
-                      </Suspense>
-                    </animated.div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="column-container">
-            <div className="presentation">
-              <div
-                className="home-pin-container all-pins"
-                style={{ marginTop: "0px" }}
-              >
-                {homePinTransition7((style, index) => {
-                  const item = listOfCategories[index];
-                  return (
-                    <animated.div
-                      style={style}
-                      className="home-page-food-usecase"
-                    >
-                      <Suspense fallback={<div>Loading...</div>}>
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}31.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}32.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}33.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}34.webp`,
-                          }}
-                        />
-                        <Pin
-                          image_id={{
-                            url: `${process.env.REACT_APP_CDN_URL}${item}35.webp`,
-                          }}
-                        />
-                      </Suspense>
-                    </animated.div>
-                  );
-                })}
-              </div>
-            </div>
+      <div className="column-container">
+        <div className="presentation">
+          <div
+            className="home-pin-container all-pins"
+            style={{ marginTop: "0px" }}
+          >
+            {homePinTransition((style, index) => {
+              const item = listOfCategories[index];
+              return (
+                <animated.div style={style} className="home-page-usecase">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}1.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}2.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}3.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}4.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}5.webp`,
+                      }}
+                    />
+                  </Suspense>
+                </animated.div>
+              );
+            })}
           </div>
         </div>
-      </animated.div>
+      </div>
+
+      <div className="column-container">
+        <div className="presentation">
+          <div
+            className="home-pin-container all-pins"
+            style={{ marginTop: "160px" }}
+          >
+            {homePinTransition2((style, index) => {
+              const item = listOfCategories[index];
+              return (
+                <animated.div style={style} className="home-page-food-usecase">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}6.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}7.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}8.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}9.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}10.webp`,
+                      }}
+                    />
+                  </Suspense>
+                </animated.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="column-container">
+        <div className="presentation">
+          <div
+            className="home-pin-container all-pins"
+            style={{ marginTop: "240px" }}
+          >
+            {homePinTransition3((style, index) => {
+              const item = listOfCategories[index];
+              return (
+                <animated.div style={style} className="home-page-food-usecase">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}11.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}12.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}13.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}14.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}15.webp`,
+                      }}
+                    />
+                  </Suspense>
+                </animated.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="column-container">
+        <div className="presentation">
+          <div
+            className="home-pin-container all-pins"
+            style={{ marginTop: "400px" }}
+          >
+            {homePinTransition4((style, index) => {
+              const item = listOfCategories[index];
+              return (
+                <animated.div style={style} className="home-page-food-usecase">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}16.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}17.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}18.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}19.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}20.webp`,
+                      }}
+                    />
+                  </Suspense>
+                </animated.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="column-container">
+        <div className="presentation">
+          <div
+            className="home-pin-container all-pins"
+            style={{ marginTop: "240px" }}
+          >
+            {homePinTransition5((style, index) => {
+              const item = listOfCategories[index];
+              return (
+                <animated.div style={style} className="home-page-food-usecase">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}21.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}22.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}23.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}24.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}25.webp`,
+                      }}
+                    />
+                  </Suspense>
+                </animated.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="column-container">
+        <div className="presentation">
+          <div
+            className="home-pin-container all-pins"
+            style={{ marginTop: "160px" }}
+          >
+            {homePinTransition6((style, index) => {
+              const item = listOfCategories[index];
+              return (
+                <animated.div style={style} className="home-page-food-usecase">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}26.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}27.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}28.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}29.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}30.webp`,
+                      }}
+                    />
+                  </Suspense>
+                </animated.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="column-container">
+        <div className="presentation">
+          <div
+            className="home-pin-container all-pins"
+            style={{ marginTop: "0px" }}
+          >
+            {homePinTransition7((style, index) => {
+              const item = listOfCategories[index];
+              return (
+                <animated.div style={style} className="home-page-food-usecase">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}31.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}32.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}33.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}34.webp`,
+                      }}
+                    />
+                    <Pin
+                      image_id={{
+                        url: `${process.env.REACT_APP_CDN_URL}${item}35.webp`,
+                      }}
+                    />
+                  </Suspense>
+                </animated.div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </AnimatedMainContentStyles>
   );
 };
