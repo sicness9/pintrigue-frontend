@@ -60,131 +60,59 @@ export const Content = styled.nav`
               align-items: center;
             }
 
-            .home-btn-container {
-              height: 48px;
-              min-width: 60px;
-              flex: 0 0 auto;
+            .home-today-btn-container {
+              display: flex;
 
-              .nav-home-btn {
-                border-radius: 24px;
-                width: 100%;
-                cursor: pointer;
-                text-decoration: none;
-                white-space: nowrap;
-                height: 48px;
-                padding-left: 16px;
-                padding-right: 16px;
-                background-color: black;
-                color: white;
-                border: none;
-                font-size: 16px;
-                font-weight: bold;
+              @media only screen and (max-width: 850px) {
+                display: none;
               }
-            }
 
-            .today-btn-container {
-              height: 48px;
-              min-width: 60px;
-              flex: 0 0 auto;
-
-              .nav-today-btn {
+              .home-btn-container {
                 height: 48px;
-                width: 100%;
-                border-radius: 24px;
-                cursor: pointer;
-                color: white;
-                outline: none;
-                padding-left: 16px;
-                padding-right: 16px;
+                min-width: 60px;
                 flex: 0 0 auto;
-                white-space: nowrap;
-                border: none;
-                background-color: white;
-                color: black;
-                font-size: 16px;
-                font-weight: bold;
 
-                &:hover {
-                  background-color: #f5f5f5;
+                .nav-home-btn {
+                  border-radius: 24px;
+                  width: 100%;
+                  cursor: pointer;
+                  text-decoration: none;
+                  white-space: nowrap;
+                  height: 48px;
+                  padding-left: 16px;
+                  padding-right: 16px;
+                  background-color: black;
+                  color: white;
+                  border: none;
+                  font-size: 16px;
+                  font-weight: bold;
                 }
               }
-            }
 
-            .nav-search-container {
-              min-width: 408px;
-              flex: 1 1 auto;
-              min-height: 0;
-              padding-left: 8px;
-              padding-right: 8px;
-              box-sizing: border-box;
-              display: block;
-              width: 100%;
-
-              .nav-search-container-for-container {
+              .today-btn-container {
                 height: 48px;
-                border-radius: 24px;
-                box-sizing: border-box;
-                background-color: #f5f5f5;
-                display: flex;
-                flex-direction: row;
-                width: 100%;
+                min-width: 60px;
+                flex: 0 0 auto;
 
-                .nav-search-item-container {
-                  border: none;
-                  height: 100%;
-                  padding: 0px 0px 0px 16px;
-                  flex: 1 1 auto;
-                  min-height: 0;
-                  min-width: 0;
-                  position: relative;
-                  align-items: center;
-                  box-sizing: border-box;
-                  display: flex;
-                  flex-direction: row;
+                .nav-today-btn {
+                  height: 48px;
                   width: 100%;
+                  border-radius: 24px;
+                  cursor: pointer;
+                  color: white;
+                  outline: none;
+                  padding-left: 16px;
+                  padding-right: 16px;
+                  flex: 0 0 auto;
+                  white-space: nowrap;
+                  border: none;
+                  background-color: white;
+                  color: black;
+                  font-size: 16px;
+                  font-weight: bold;
 
-                  .search-logo-container {
-                    margin-right: 8px;
-                    flex: 0 0 auto;
-                    box-sizing: border-box;
-                    display: block;
-
-                    .search-logo {
-                      height: 16px;
-                      width: 16px;
-                      overflow: hidden;
-                    }
-                  }
-
-                  .nav-search {
-                    height: 100%;
-                    flex: 1 1 auto;
-                    min-height: 0;
-                    min-width: 0;
-                    background-color: transparent;
-                    border: none;
-                    color: #333;
-                    font-size: 16px;
-                    font-weight: normal;
-                    outline: none;
-                    padding: 0;
-                    width: 100%;
-                    line-height: normal;
-
-                    input {
-                      margin: 0;
-                      vertical-align: middle;
-                      text-transform: none;
-                      text-indent: 0px;
-                      text-shadow: none;
-                      display: inline-block;
-                      text-align: start;
-                      appearance: auto;
-                      cursor: text;
-                      letter-spacing: normal;
-                      word-spacing: normal;
-                      width: 100%;
-                    }
+                  &:hover {
+                    background-color: #f5f5f5;
                   }
                 }
               }
@@ -194,12 +122,15 @@ export const Content = styled.nav`
               align-items: center;
               display: flex;
               flex-direction: row;
+              box-sizing: border-box;
 
               .notification-bell-container {
                 position: relative;
                 border-radius: 50%;
                 width: 100%;
                 cursor: pointer;
+                display: block;
+                box-sizing: border-box;
 
                 .bell-btn {
                   height: 48px;
@@ -212,6 +143,8 @@ export const Content = styled.nav`
                   border: none;
                   border-radius: 50%;
                   background-color: transparent;
+                  position: relative;
+                  box-sizing: border-box;
 
                   &:hover {
                     background-color: #f5f5f5;

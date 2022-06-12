@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 
 //components
 import AccountOptionsFlyout from "../AccountOptionsFlyout/AccountOptionsFlyout";
+import SearchBar from "../SearchBar/SearchBar";
+import HomeTodayPopout from "../HomeTodayPopout/HomeTodayPopout";
 
 // styles
 import { Wrapper, Content } from "./AuthedHeader.styles";
@@ -14,9 +17,13 @@ import inbox from "../../images/inbox.svg";
 import userLogo from "../../images/temp-user-profile.svg";
 import menuArrow from "../../images/menu-arrow.svg";
 
+// context
+import { SuggestionContext } from "../../Context/SuggestionContext";
+
 const AuthedHeader = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
+  const [openSuggestion, setOpenSuggestion] = useContext(SuggestionContext);
 
   return (
     <Wrapper>
@@ -27,35 +34,22 @@ const AuthedHeader = () => {
               <div className="nav-bar-container">
                 <nav className="nav-bar">
                   <div className="logo-nav">
-                    <img className="logo" src={logo} alt="logo" />
+                    <a href="/">
+                      <img className="logo" src={logo} alt="logo" />
+                    </a>
                   </div>
-                  <div className="home-btn-container">
-                    <button className="nav-home-btn">Home</button>
-                  </div>
-                  <div className="today-btn-container">
-                    <button className="nav-today-btn">Today</button>
-                  </div>
-                  <div className="nav-search-container">
-                    <div className="nav-search-container-for-container">
-                      <div className="nav-search-item-container">
-                        <div className="search-logo-container">
-                          <img
-                            className="search-logo"
-                            src={searchLogo}
-                            alt="search"
-                          />
-                        </div>
-                        <input
-                          autoCapitalize="off"
-                          autoComplete="off"
-                          autoCorrect="off"
-                          className="nav-search"
-                          type="search"
-                          placeholder="Search"
-                        ></input>
-                      </div>
+                  <div className="home-today-btn-container">
+                    <div className="home-btn-container">
+                      <Link to="/user-home">
+                        <button className="nav-home-btn">Home</button>
+                      </Link>
+                    </div>
+                    <div className="today-btn-container">
+                      <button className="nav-today-btn">Today</button>
                     </div>
                   </div>
+                  {!openSuggestion && <HomeTodayPopout />}
+                  <SearchBar />
                   <div className="btns-container">
                     <div className="notification-bell-container">
                       <div className="bell-btn">
