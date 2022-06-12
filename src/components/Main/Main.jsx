@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useTransition, animated, config } from "react-spring";
-import axios from "axios";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 // styles
@@ -11,6 +10,7 @@ import {
   TitleContent,
   AnimatedTitle,
   AnimatedCarousel,
+  EntireScreenWrapper,
 } from "./Main.styles";
 
 // components
@@ -33,28 +33,6 @@ const Main = () => {
   const [index, setIndex] = useState(0);
   const item = listOfNums[index];
 
-  // search for pins by category
-  // useEffect(() => {
-  //     let APICall = true
-  //     if (APICall) {
-  //         axios.get('http://127.0.0.1:8000/api/pins/category/',
-  //         {
-  //             params: {
-  //                 "category": "Food"
-  //             }
-  //         })
-  //         .then(res => {
-  //             setPins(res.data);
-  //         })
-  //         return () => {
-  //             APICall = false;
-  //             console.log(pins)
-  //         }
-  //     }
-  // }, [])
-
-  console.log("Index: ", index);
-
   const handleRest = () => {
     if (index === items.length - 0.5) {
       setIndex(0);
@@ -76,76 +54,65 @@ const Main = () => {
   });
 
   return (
-    <>
+    <EntireScreenWrapper>
       <Header />
       <Wrapper>
         <div className="page-container">
-          <div className="fullpage">
-            <div className="fullpage-wrapper">
-              <Parallax
-                pages={2}
-                style={{ top: 0, left: 0 }}
-                config={{ config: config.molasses, duration: 500 }}
-              >
-                <ParallaxLayer offset={0} speed={2.5}>
-                  <div className="main">
-                    <TitleContent>
-                      <div className="main-title-content">
-                        <div className="home-main-title">
-                          <h1>Get your next</h1>
-                        </div>
-                        <AnimatedTitle>
-                          {transitions((style, index) => {
-                            const item = listOfItems[index];
-                            return (
-                              <animated.div style={style}>{item}</animated.div>
-                            );
-                          })}
-                        </AnimatedTitle>
+          <Parallax
+            pages={2}
+            style={{ top: 0, left: 0 }}
+            config={{ config: config.molasses, duration: 500 }}
+          >
+            <ParallaxLayer offset={0} speed={2.5}>
+              <div className="main">
+                <TitleContent>
+                  <div className="home-main-title">Get your next</div>
 
-                        <AnimatedCarousel>
-                          <ul>
-                            <li>
-                              <button
-                                className={item === 0 ? "dot-1" : "dot-0"}
-                              ></button>
-                            </li>
-                            <li>
-                              <button
-                                className={item === 1 ? "dot-2" : "dot-0"}
-                              ></button>
-                            </li>
-                            <li>
-                              <button
-                                className={item === 2 ? "dot-3" : "dot-0"}
-                              ></button>
-                            </li>
-                            <li>
-                              <button
-                                className={item === 3 ? "dot-4" : "dot-0"}
-                              ></button>
-                            </li>
-                          </ul>
-                        </AnimatedCarousel>
-                      </div>
-                    </TitleContent>
-                    <AnimatedMainContent
-                      index={index}
-                      setIndex={setIndex}
-                      items={items}
-                    />
-                    <BottomFade />
-                  </div>
-                </ParallaxLayer>
-                <ParallaxLayer offset={1} speed={0.5}>
-                  <SignupModalInspired />
-                </ParallaxLayer>
-              </Parallax>
-            </div>
-          </div>
+                  {transitions((style, index) => {
+                    const item = listOfItems[index];
+                    return <AnimatedTitle style={style}>{item}</AnimatedTitle>;
+                  })}
+
+                  <AnimatedCarousel>
+                    <ul>
+                      <li>
+                        <button
+                          className={item === 0 ? "dot-1" : "dot-0"}
+                        ></button>
+                      </li>
+                      <li>
+                        <button
+                          className={item === 1 ? "dot-2" : "dot-0"}
+                        ></button>
+                      </li>
+                      <li>
+                        <button
+                          className={item === 2 ? "dot-3" : "dot-0"}
+                        ></button>
+                      </li>
+                      <li>
+                        <button
+                          className={item === 3 ? "dot-4" : "dot-0"}
+                        ></button>
+                      </li>
+                    </ul>
+                  </AnimatedCarousel>
+                </TitleContent>
+                <AnimatedMainContent
+                  index={index}
+                  setIndex={setIndex}
+                  items={items}
+                />
+                <BottomFade />
+              </div>
+            </ParallaxLayer>
+            <ParallaxLayer offset={1} speed={0.5}>
+              <SignupModalInspired />
+            </ParallaxLayer>
+          </Parallax>
         </div>
       </Wrapper>
-    </>
+    </EntireScreenWrapper>
   );
 };
 

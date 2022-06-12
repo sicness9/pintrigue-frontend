@@ -1,80 +1,83 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-export const Wrapper = styled.div`
-  overflow: hidden visible;
+export const EntireScreenWrapper = styled.div`
+  height: 100vh;
   box-sizing: border-box;
   display: block;
   overflow: hidden;
+  left: 0;
+`;
+
+export const Wrapper = styled.div`
+  top: 80px;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  left: 0;
 
   .page-container {
+    width: 100%;
+    align-content: center;
+    align-items: center;
     box-sizing: border-box;
-    display: block;
-    overflow: hidden;
+    flex-direction: column;
+    display: flex;
 
-    .fullpage {
+    .main {
+      top: 80px;
+      width: 1750px;
       height: 100%;
+      box-sizing: border-box;
+      position: relative;
       display: block;
-      overflow: hidden;
-
-      .fullpage-wrapper {
-        box-sizing: border-box;
-        display: block;
-        overflow: hidden;
-
-        .main {
-          height: 100vh;
-          width: 100%;
-          top: 80px;
-          align-content: center;
-          justify-content: center;
-          overflow: hidden visible;
-          box-sizing: border-box;
-          background-color: #fff;
-          display: block;
-          overflow: hidden;
-        }
-      }
+      margin: auto;
     }
   }
 `;
 
 export const TitleContent = styled.div`
-  height: calc(30vh + 140px);
-  display: flex;
-  align-items: center;
-  text-align: center;
+  height: 30%;
   justify-content: flex-end;
   flex-direction: column;
-  margin-top: 0;
   margin-bottom: 0;
-  overflow: hidden;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
 
-  .main-title-content {
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-
-    h1 {
-      display: block;
-      margin-top: 50px;
-      margin-bottom: 0;
-      font-size: 60px;
-      font-weight: 600;
-    }
+  .home-main-title {
+    margin: 2px;
+    font-size: 60px;
+    font-weight: 600;
+    box-sizing: border-box;
+    display: block;
+    /* position: fixed; */
   }
 `;
 
 export const AnimatedTitle = styled(animated.div)`
-  font-size: 60px;
-  margin: 2px;
-  font-weight: 600;
-  text-align: center;
-  overflow: hidden;
+  height: 60px;
+  width: 65%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 48px;
+  display: flex;
+  flex-direction: row;
 
   p {
-    margin: 0;
+    font-size: 60px;
+    margin: 0px;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0px;
   }
 
   .home-page-food {
@@ -95,7 +98,7 @@ export const AnimatedTitle = styled(animated.div)`
 `;
 
 export const AnimatedCarousel = styled.div`
-  z-index: 999;
+  z-index: 1;
   box-sizing: border-box;
   display: block;
   display: flex;
