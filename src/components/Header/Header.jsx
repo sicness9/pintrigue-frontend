@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 //styles
-import { Wrapper, Content } from "./Header.styles";
+import { Content } from "./Header.styles";
 
 // images
 import logo from "../../images/logo.svg";
@@ -16,22 +16,23 @@ const Header = () => {
   const handleOpen = () => setOpen(true);
 
   return (
-    <Wrapper>
-      <header>
-        <Content>
-          <nav className="nav-bar">
-            <div className="logo-nav">
-              <img className="logo" src={logo} alt="logo" />
-              <h1>Pintrigue</h1>
-            </div>
+    <>
+      <Content>
+        <nav className="nav-bar">
+          <div className="logo-nav">
+            <img className="logo" src={logo} alt="logo" />
+            <h1>Pintrigue</h1>
+          </div>
+          <div className="header-btn-container">
             <button className="log-in-btn" onClick={handleOpen}>
               Log In
             </button>
-          </nav>
-        </Content>
-        <Modal open={open} setOpen={setOpen} />
-      </header>
-    </Wrapper>
+            <button className="sign-up-btn">Sign Up</button>
+          </div>
+        </nav>
+      </Content>
+      <Modal open={open} setOpen={setOpen} />
+    </>
   );
 };
 
