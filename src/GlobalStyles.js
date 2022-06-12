@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
     :root {
         --primary-color: #E60023;
+        --colorRedHovered: #ad081b;
     }
 
     * {
