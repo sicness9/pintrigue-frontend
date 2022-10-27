@@ -9,7 +9,7 @@ import searchLogo from "../../images/search-logo.svg";
 const SearchAutoComplete = (props) => {
   const handleClick = (e) => {
     props.setFilteredSuggestions([]);
-    props.setSearchValue(e.taget.innerText);
+    props.setSearchValue(e.target.innerText);
     props.setActiveSuggestionIndex(0);
     props.setOpenSuggestion(false);
   };

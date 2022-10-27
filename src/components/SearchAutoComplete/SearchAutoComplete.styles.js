@@ -41,6 +41,7 @@ export const AutoCompleteList = styled.div`
         font-weight: normal;
         text-decoration: none;
         color: #000;
+        width: 100%;
       }
     }
   }
