@@ -2,7 +2,6 @@ import { useState, useEffect, Suspense, lazy } from "react";
 import axios from "axios";
 
 // components
-import AuthedHeader from "../AuthedHeader/AuthedHeader";
 import Pin from "../Pin/Pin";
 // import CommentSection from "../CommentSection/CommentSection";
 
@@ -31,9 +30,8 @@ const PinView = () => {
       .get(`http://127.0.0.1:8000/api/pins/id`, {
         params: { pin_id: pinId },
       })
-      .then((response) => {
-        setPin(response.data);
-      })
+      .then((res) => res.data)
+      .then((data) => setPin(data))
       .catch((error) => {
         console.log(error);
       });
@@ -47,9 +45,9 @@ const PinView = () => {
     }
   }, [pin]);
 
+  console.log(pin);
   return (
     <>
-      <AuthedHeader />
       <PinViewContainer>
         <PinViewContent>
           <div className="pin-image-view-container">
@@ -134,7 +132,7 @@ const PinView = () => {
             </div>
             <div className="pin-publish-info-container">
               <div className="publish-info-text">
-                Published on {pin.created_at}
+                Published on {pin?.created_at}
               </div>
             </div>
             <div className="pin-comments-container">
@@ -149,10 +147,14 @@ const PinView = () => {
                   </div>
                   <div className="pin-owner-name-stats-container">
                     <div className="pin-owner-name-container">
-                      <div className="owner-name-text">{pin.posted_by}</div>
+                      <div className="owner-name-text">
+                        {pin?.posted_by?.posted_by?.username}
+                      </div>
                     </div>
                     <div className="pin-owner-stats-container">
-                      <div className="owner-stats-text">3.6k followers</div>
+                      <div className="owner-stats-text">
+                        {pin?.posted_by?.posted_by?.follower_count} followers
+                      </div>
                     </div>
                   </div>
                 </div>
