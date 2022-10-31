@@ -14,10 +14,13 @@ export const FeedPin = styled.div`
   cursor: pointer;
 
   .image-container {
-    .obj {
+    width: 100%;
+    height: 100%;
+
+    img {
       width: 100%;
       height: 100%;
-      background-size: cover;
+      background-size: auto;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 8px;
