@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 // styles
 import { Wrapper } from "./ModalSignupView.styles";
 
@@ -5,7 +9,29 @@ import { Wrapper } from "./ModalSignupView.styles";
 import logo from "../../images/logo.svg";
 import closeButton from "../../images/close-button.svg";
 
+// state management
+import { useSignupMutation } from "../../slices/userApiSlice";
+import { useLoginMutation, useVerifyMutation } from "../../slices/authApiSlice";
+import { setToken } from "../../slices/tokenSlice";
+import { setAuthed } from "../../slices/authedSlice";
+import { setUser } from "../../slices/userSlice";
+
 const ModalSignUpView = (props) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [signup] = useSignupMutation();
+  const [login] = useLoginMutation();
+  const [verify] = useVerifyMutation();
+  const token = useSelector((state) => state.token.value);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  // handle state change for input fields
+  const handleEmailInput = (e) => setEmail(e.target.value);
+  const handlePasswordInput = (e) => setPassword(e.target.value);
+  const handleUsernameInput = (e) => setUsername(e.target.value);
+
   const handleCloseClick = () => {
     props.setOpen(false);
   };
@@ -13,6 +39,47 @@ const ModalSignUpView = (props) => {
   const handleSignInClick = () => {
     props.setIsSignIn(true);
     props.setIsSignup(false);
+  };
+
+  const handleSignUp = async () => {
+    const data = {
+      username: username,
+      password: password,
+      email: email,
+      image_id: "",
+    };
+    await signup(data).unwrap();
+  };
+
+  const handleLogin = async () => {
+    const formData = new FormData();
+    formData.append("username", username);
+    formData.append("password", password);
+    const response = await login(formData).unwrap();
+    dispatch(setToken(response.access_token));
+    dispatch(setAuthed(true));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // sign up
+      await handleSignUp();
+
+      // log in
+      await handleLogin();
+      setUsername("");
+      setPassword("");
+      setEmail("");
+
+      // verify user with token
+      const user = await verify(token).unwrap();
+      dispatch(setUser(user));
+      navigate("/user-home");
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -43,7 +110,7 @@ const ModalSignUpView = (props) => {
           </div>
           <div className="signup-options">
             <div className="form-container">
-              <form className="register-form">
+              <form className="register-form" onSubmit={handleSubmit}>
                 <div className="emailInputField">
                   <fieldset>
                     <div className="email-label-container">
@@ -60,6 +127,7 @@ const ModalSignUpView = (props) => {
                           name="id"
                           placeholder="Email"
                           type="email"
+                          onChange={handleEmailInput}
                         ></input>
                       </div>
                     </span>
@@ -81,6 +149,7 @@ const ModalSignUpView = (props) => {
                           name="password"
                           placeholder="Create a password"
                           type="password"
+                          onChange={handlePasswordInput}
                         ></input>
                       </div>
                     </span>
@@ -100,6 +169,7 @@ const ModalSignUpView = (props) => {
                           id="username"
                           name="username"
                           placeholder="Username"
+                          onChange={handleUsernameInput}
                         ></input>
                       </div>
                     </span>
