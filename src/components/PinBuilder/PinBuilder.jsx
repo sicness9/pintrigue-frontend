@@ -1,4 +1,8 @@
 import { useState, useEffect, useContext } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+// state managemtn
+import { addPinToFeed, resetPinFeed } from "../../slices/pinFeedSlice";
 
 // components
 import AuthedHeader from "../AuthedHeader/AuthedHeader";
@@ -13,6 +17,9 @@ import { CreatePinContext } from "../../Context/newPinContext";
 import { Wrapper, PinBuilderContent } from "./PinBuilder.styles";
 
 const PinBuilder = () => {
+  const dispatch = useDispatch();
+  const pinComponents = useSelector((state) => state.pinFeed);
+
   const [components, setComponents] = useState([<PinBuilderBlueprint />]);
   const [newPin, setNewPin] = useContext(CreatePinContext);
 
@@ -47,9 +54,12 @@ const PinBuilder = () => {
     }
   }, [newPin, setNewPin]);
 
+  const resetPins = () => {
+    dispatch(resetPinFeed());
+  };
+
   return (
     <>
-      <AuthedHeader />
       <Wrapper>
         <PinBuilderContent
           createPinPageActive={createPinPageActive}
@@ -63,7 +73,7 @@ const PinBuilder = () => {
               {createPinPageActive && <div className="under-button"></div>}
             </div>
             <div className="cancel-btn-container" onClick={selectCancelPage}>
-              <button className="cancel-btn">
+              <button className="cancel-btn" onClick={resetPins}>
                 <div className="cancel-btn-text">Cancel</div>
               </button>
               {cancelPageActive && <div className="under-button"></div>}
