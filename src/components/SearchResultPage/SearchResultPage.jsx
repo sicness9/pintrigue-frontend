@@ -16,7 +16,6 @@ const SearchResultPage = (props) => {
 
   return (
     <>
-      <AuthedHeader />
       <Wrapper>
         <SearchResultGrid category={category} />
       </Wrapper>
