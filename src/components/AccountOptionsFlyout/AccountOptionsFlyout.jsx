@@ -1,15 +1,29 @@
 import { useRef, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring } from "react-spring";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 // styles
 import { Wrapper, AnimatedPopoutMenu } from "./AccountOptionsFlyout.styles";
 
 // images
-import userProfile from "../../images/temp-user-profile.svg";
 import checkMark from "../../images/checkmark.svg";
+
+// state
+import { clearToken } from "../../slices/tokenSlice";
+import { setAuthed } from "../../slices/authedSlice";
 
 const AccountOptionsFlyout = (props) => {
   const ref = useRef(null);
+  const user = useSelector((state) => state.user.value);
+  const dispatch = useDispatch();
+
+  console.log("User info: ", user);
+
+  const logOut = () => {
+    dispatch(clearToken());
+    dispatch(setAuthed(false));
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -66,7 +80,7 @@ const AccountOptionsFlyout = (props) => {
                                               dy="0.35em"
                                               textAnchor="middle"
                                             >
-                                              N
+                                              {user.username[0].toUpperCase()}
                                             </text>
                                           </svg>
                                         </div>
@@ -75,7 +89,7 @@ const AccountOptionsFlyout = (props) => {
                                   </div>
                                   <div className="userinfo-title-container">
                                     <div className="userinfo-users-name">
-                                      Nelson Torres
+                                      {user.username}
                                     </div>
                                     <div className="userinfo-accounttype-container">
                                       <div className="userinfo-account-type">
@@ -84,7 +98,7 @@ const AccountOptionsFlyout = (props) => {
                                     </div>
                                     <div className="userinfo-email-container">
                                       <div className="userinfo-user-email">
-                                        mrnelsontorres@gmail.com
+                                        {user.email}
                                       </div>
                                     </div>
                                   </div>
@@ -123,7 +137,7 @@ const AccountOptionsFlyout = (props) => {
                   </div>
                   <div className="menuitem-logout-container">
                     <div className="logout-space-controller">
-                      <a className="logout-link" href="#">
+                      <Link className="logout-link" to="/" onClick={logOut}>
                         <div className="logout-link-direction-controller">
                           <div className="logout-link-space-controller">
                             <div className="logout-more-space-controller">
@@ -135,7 +149,7 @@ const AccountOptionsFlyout = (props) => {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
