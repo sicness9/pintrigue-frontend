@@ -43,6 +43,7 @@ export const ThumbnailStyles = styled.div`
         align-items: center;
         height: 100%;
         border-radius: 50%;
+        cursor: pointer;
 
         &:hover {
           background-color: #e2e2e2;
