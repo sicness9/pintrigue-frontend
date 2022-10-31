@@ -55,7 +55,6 @@ const Main = () => {
 
   return (
     <EntireScreenWrapper>
-      <Header />
       <Wrapper>
         <div className="page-container">
           <Parallax
