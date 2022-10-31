@@ -14,7 +14,6 @@ import { SuggestionContext } from "../../Context/SuggestionContext";
 const SignedInUserHome = () => {
   return (
     <>
-      <AuthedHeader />
       <Wrapper>
         <UserHomeGrid />
       </Wrapper>
