@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 // components
@@ -52,12 +53,14 @@ const UserHomeGrid = (props) => {
     <AnimatedGrid>
       <div className="grid-container">
         {items.map((item, index) => (
-          <Pin
-            key={index}
-            image_id={{
-              url: `${process.env.REACT_APP_CDN_URL}${item.image_id}`,
-            }}
-          />
+          <Link to={`/pin/${item.pin_id}`}>
+            <Pin
+              key={index}
+              image_id={{
+                url: `${process.env.REACT_APP_CDN_URL}${item.image_id}`,
+              }}
+            />
+          </Link>
         ))}
       </div>
     </AnimatedGrid>
