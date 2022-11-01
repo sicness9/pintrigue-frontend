@@ -1,16 +1,24 @@
 import { createContext, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 
-export const UserContext = createContext();
+import { setToken } from "../slices/tokenSlice";
+import { setAuthed } from "../slices/authedSlice";
+import { setUser } from "../slices/userSlice";
+
+export const UserContext = createContext({});
 
 const UserProvider = (props) => {
-  const [token, setToken] = useState(localStorage.getItem("pintrigue_token"));
-  const [authed, setAuthed] = useState(false);
-  const [currentUser, setCurrentUser] = useState({});
+  const dispatch = useDispatch();
+  const token = useSelector((state) => state.token.value);
+
+  console.log("Token ", token);
 
   // token management
   useEffect(() => {
     const fetchToken = async () => {
+      console.log("fetching token");
+
       const requestOptions = {
         headers: {
           "Context-Type": "application/json",
@@ -23,9 +31,11 @@ const UserProvider = (props) => {
         requestOptions
       );
 
+      console.log("token response", response);
+
       if (!response.ok) {
-        setToken(null);
-        setAuthed(false);
+        dispatch(setToken(null));
+        dispatch(setAuthed(false));
       }
 
       localStorage.setItem("pintrigue_token", token);
@@ -37,6 +47,8 @@ const UserProvider = (props) => {
   // get current user
   useEffect(() => {
     const fetchUser = async () => {
+      console.log("fetching user");
+
       const requestOptions = {
         headers: {
           "Context-Type": "application/json",
@@ -46,17 +58,13 @@ const UserProvider = (props) => {
 
       await axios
         .get("http://localhost:8000/api/auth/me", requestOptions)
-        .then((res) => setCurrentUser(res.data));
+        .then((res) => dispatch(setUser(res.data)));
     };
     fetchUser();
   }, [token]);
 
   return (
-    <UserContext.Provider
-      value={[token, setToken, authed, setAuthed, currentUser, setCurrentUser]}
-    >
-      {props.children}
-    </UserContext.Provider>
+    <UserContext.Provider value={[]}>{props.children}</UserContext.Provider>
   );
 };
 

@@ -8,7 +8,7 @@ export const useFetchPopularCategories = () => {
     let APICall = true;
     if (APICall) {
       axios
-        .get("http://127.0.0.1:8000/api/pins/popular/", {
+        .get("http://127.0.0.1:8000/api/pins/popular-pins", {
           params: { limit: 9 },
         })
         .then((res) => {

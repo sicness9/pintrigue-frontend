@@ -2,14 +2,14 @@ import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 // components
-import Main from "./components/Main/Main";
-import SignedInUserHome from "./components/SignedInUserHome/SignedInUserHome";
-import PinBuilder from "./components/PinBuilder/PinBuilder";
-import SearchResultPage from "./components/SearchResultPage/SearchResultPage";
-import PinView from "./components/PinView/PinView";
-import UnauthedView from "./components/UnauthedView/UnauthedView";
-import AuthedHeader from "./components/AuthedHeader/AuthedHeader";
-import Header from "./components/Header/Header";
+import Main from "./components/mainPage/Main/Main";
+import SignedInUserHome from "./components/users/SignedInUserHome/SignedInUserHome";
+import PinBuilder from "./components/pins/PinBuilder/PinBuilder";
+import SearchResultPage from "./components/miscPages/SearchResultPage/SearchResultPage";
+import PinView from "./components/pins/PinView/PinView";
+import UnauthedView from "./components/miscPages/UnauthedView/UnauthedView";
+import AuthedHeader from "./components/navbar/AuthedHeader/AuthedHeader";
+import Header from "./components/navbar/Header/Header";
 import RequireAuth from "./components/RequireAuth";
 
 // context
