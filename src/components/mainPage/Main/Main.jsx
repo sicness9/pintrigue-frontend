@@ -1,6 +1,6 @@
 // main component
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTransition, config } from "react-spring";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 

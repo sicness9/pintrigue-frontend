@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 //components
 import AccountOptionsFlyout from "../AccountOptionsFlyout/AccountOptionsFlyout";
@@ -13,7 +14,6 @@ import { Wrapper, Content } from "./AuthedHeader.styles";
 import logo from "../../../images/logo.svg";
 import notificationBell from "../../../images/notification-bell.svg";
 import inbox from "../../../images/inbox.svg";
-import userLogo from "../../../images/temp-user-profile.svg";
 import menuArrow from "../../../images/menu-arrow.svg";
 
 // context
@@ -23,6 +23,7 @@ const AuthedHeader = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const [openSuggestion, setOpenSuggestion] = useContext(SuggestionContext);
+  const user = useSelector((state) => state.user.value);
 
   return (
     <Wrapper>
@@ -79,12 +80,27 @@ const AuthedHeader = () => {
                             <div className="profile-image-wrapper">
                               <div className="profile-button-size-controller">
                                 <div className="profile-btn">
-                                  <div className="img-container">
-                                    <img
-                                      className="user-logo"
-                                      src={userLogo}
-                                      alt="user"
-                                    ></img>
+                                  <div className="user-image-container">
+                                    <div className="user-image-shape-controller">
+                                      <div className="user-image-space-controller">
+                                        <svg
+                                          width="100%"
+                                          viewBox="-50 -50 100 100"
+                                          preserveAspectRatio="xMidYMid meet"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <text
+                                            className="user-initial"
+                                            fontSize="40px"
+                                            fill="#111"
+                                            dy="0.35em"
+                                            textAnchor="middle"
+                                          >
+                                            {user.username[0].toUpperCase()}
+                                          </text>
+                                        </svg>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>

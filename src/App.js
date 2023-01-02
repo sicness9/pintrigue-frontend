@@ -11,6 +11,7 @@ import UnauthedView from "./components/miscPages/UnauthedView/UnauthedView";
 import AuthedHeader from "./components/navbar/AuthedHeader/AuthedHeader";
 import Header from "./components/navbar/Header/Header";
 import RequireAuth from "./components/RequireAuth";
+import EditProfile from "./components/userSettings/EditProfile/EditProfile";
 
 // context
 import SuggestionContextProvider from "./Context/SuggestionContext";
@@ -32,6 +33,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/unauthed-view" element={<UnauthedView />} />
+            <Route path="/settings/edit-profile" element={<EditProfile />} />
             {/* Protected routes*/}
             <Route element={<RequireAuth />}>
               <Route path="/user-home" element={<SignedInUserHome />} />
