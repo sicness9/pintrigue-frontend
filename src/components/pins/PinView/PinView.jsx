@@ -27,9 +27,7 @@ const PinView = () => {
   useEffect(() => {
     const pinId = window.location.pathname.split("/")[2];
     axios
-      .get(`http://127.0.0.1:8000/api/pins/id`, {
-        params: { pin_id: pinId },
-      })
+      .get(`${process.env.REACT_APP_API_URL}/pins/search-by-id/${pinId}`)
       .then((res) => res.data)
       .then((data) => setPin(data))
       .catch((error) => {
