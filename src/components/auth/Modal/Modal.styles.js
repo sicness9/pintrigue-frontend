@@ -27,9 +27,9 @@ export const AnimatedModal = styled(animated.div)`
   min-width: 375px;
   max-width: 480px;
   width: 50%;
-  height: 60%;
-  min-height: 400px;
-  max-height: 63opx;
+  /* height: 50%; */
+  min-height: 100px;
+  max-height: 630px;
   margin: auto;
   top: 50%;
   left: 50%;
