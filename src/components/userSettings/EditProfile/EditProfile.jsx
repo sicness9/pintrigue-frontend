@@ -6,6 +6,12 @@ import TempUserImage from "../../RandomComponents/TempUserImage/TempUserImage";
 // styles
 import { ContentWrapper } from "./EditProfile.styles";
 
+// images
+import darkFilter from "../../../images/filter-dark.svg";
+import lightFilter from "../../../images/filter-light.svg";
+import addSign from "../../../images/add-sign.svg";
+import addSignLight from "../../../images/add-sign-white.svg";
+
 const EditProfile = () => {
   const user = useSelector((state) => state.user.value);
   return (
