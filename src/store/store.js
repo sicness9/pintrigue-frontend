@@ -17,7 +17,6 @@ const reducers = combineReducers({
   token: tokenReducer,
   user: userReducer,
   authed: authedReducer,
-  pinFeed: pinFeedReducer,
   auth: authReducer,
   [apiSlice.reducerPath]: apiSlice.reducer,
 });
