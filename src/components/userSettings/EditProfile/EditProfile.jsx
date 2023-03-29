@@ -37,13 +37,13 @@ const EditProfile = () => {
   return (
     <ContentWrapper>
       <div className="settings-page-container">
-          <div className="manage-photo-container">
-            <div className="photo-n-btn-container">
-              <div className="photo-example">
-                <TempUserImage user={user} />
-              </div>
+        <div className="manage-photo-container">
+          <div className="photo-n-btn-container">
+            <div className="photo-example">
+              <TempUserImage user={user} />
             </div>
           </div>
+        </div>
         <div className="user-info-container">
           <div className="user-handle">@{user.username}</div>
           <div className="follower-count">{user.follower_count} following</div>
