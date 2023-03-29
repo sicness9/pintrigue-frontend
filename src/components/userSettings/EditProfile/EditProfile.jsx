@@ -14,6 +14,25 @@ import addSignLight from "../../../images/add-sign-white.svg";
 
 const EditProfile = () => {
   const user = useSelector((state) => state.user.value);
+  const [createdActive, setCreatedActive] = useState(false);
+  const [savedActive, setSavedActive] = useState(true);
+
+  // toggles created button to show if active
+  const selectCreateButton = () => {
+    if (savedActive) {
+      setSavedActive(false);
+      setCreatedActive(true);
+    }
+  };
+
+  // toggles saved button to show if active
+  const selectSavedButton = () => {
+    if (createdActive) {
+      setCreatedActive(false);
+      setSavedActive(true);
+    }
+  };
+
   return (
     <ContentWrapper>
       <div className="settings-page-container">
