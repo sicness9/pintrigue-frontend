@@ -47,15 +47,14 @@ const ModalLoginPage = (props) => {
     try {
       // login
       await handleLogin();
-      setUsername("");
-      setPassword("");
-
-      // verify user with token and get user data
-      const user = await verify(token).unwrap();
-      dispatch(setUser(user));
-      navigate("/user-home");
     } catch (err) {
       console.log(err);
+    } finally {
+      const user = await verify(token).unwrap();
+      dispatch(setUser(user));
+      setUsername("");
+      setPassword("");
+      navigate("/user-home");
     }
   };
 
