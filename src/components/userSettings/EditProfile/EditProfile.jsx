@@ -44,6 +44,35 @@ const EditProfile = () => {
               </div>
             </div>
           </div>
+        <div className="user-info-container">
+          <div className="user-handle">@{user.username}</div>
+          <div className="follower-count">{user.follower_count} following</div>
+        </div>
+        <div className="share-edit-container">
+          <button>Share</button>
+          <button>Edit Profile</button>
+        </div>
+        <div className="user-pin-mgmt-container">
+          <div className="pin-mgmt-nav">
+            <div className="created-btn-container">
+              <button>Created</button>
+            </div>
+            <div className="saved-btn-container">
+              <button>Saved</button>
+            </div>
+          </div>
+        </div>
+        <div className="filter-bar">
+          <button className="filter-btn">
+            <img
+              className="filter-btn-img"
+              alt="filter-button"
+              src={darkFilter}
+            />
+          </button>
+          <button>
+            <img alt="add-pin-btn" src={addSign} />
+          </button>
         </div>
       </div>
     </ContentWrapper>
