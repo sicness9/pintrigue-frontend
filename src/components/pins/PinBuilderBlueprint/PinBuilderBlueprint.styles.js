@@ -129,6 +129,14 @@ export const PinBuilderBlueprintStyles = styled.div`
             font-size: 16px;
             text-align: center;
             cursor: pointer;
+
+            &:hover {
+              background-color: var(--colorRedHovered);
+            }
+
+            &:active {
+              transform: translateY(2px);
+            }
           }
         }
       }
