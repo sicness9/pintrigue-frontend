@@ -7,9 +7,6 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  .under-btn {
-  }
-
   .settings-page-container {
     margin-top: 80px;
     padding: 15px;
@@ -83,14 +80,35 @@ export const ContentWrapper = styled.div`
         flex-direction: row;
         justify-content: center;
 
+        .created-btn-container {
+          .under-btn {
+            border-bottom: 3px solid black;
+            width: 60px;
+            margin-left: 5px;
+            border-radius: 2px;
+            margin-top: 5px;
+          }
+        }
+
+        .saved-btn-container {
+          .under-btn {
+            border-bottom: 3px solid black;
+            width: 45px;
+            margin-left: 5px;
+            border-radius: 2px;
+            margin-top: 5px;
+          }
+        }
+
         button {
           border: none;
           margin-right: 15px;
           height: 30px;
           background-color: transparent;
-          border-radius: 10px;
-          font-size: 17px;
+          border-radius: 7px;
+          font-size: 16px;
           font-weight: 500;
+          cursor: pointer;
 
           &:hover {
             background-color: var(--greyHover);
