@@ -10,6 +10,7 @@ import blackMenuArrow from "../../../images/menu-arrow.svg";
 const HomeTodayPopout = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const ref = useRef(null);
 
   useEffect(() => {
