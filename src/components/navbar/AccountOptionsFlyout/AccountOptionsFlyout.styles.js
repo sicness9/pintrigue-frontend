@@ -37,16 +37,12 @@ export const AnimatedPopoutMenu = styled(animated.div)`
       .contents-space-controller {
         margin-right: 8px;
         margin-left: 8px;
-        flex: 1 1 auto;
         min-height: 0;
         min-width: 0;
-        align-items: center;
-        box-sizing: border-box;
         margin-bottom: 8px;
         margin-top: 8px;
         flex-direction: column;
         display: flex;
-        /* color: #fff; */
 
         .currently-in-container {
           width: 100%;
@@ -340,13 +336,8 @@ export const AnimatedPopoutMenu = styled(animated.div)`
                         cursor: pointer;
 
                         .settings-link-text {
-                          -webkit-line-clamp: 1;
                           text-align: left;
-                          -webkit-box-orient: vertical;
-                          display: -webkit-box;
                           overflow: hidden;
-                          word-break: break-word;
-                          word-wrap: break-word;
                           font-weight: 700;
                           font-size: 16px;
                           cursor: pointer;
