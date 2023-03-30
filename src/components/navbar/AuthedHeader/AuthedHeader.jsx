@@ -75,7 +75,7 @@ const AuthedHeader = () => {
 
                     <div className="user-home-container">
                       <div className="header-profile">
-                        <a className="profile-link" href="#">
+                        <Link className="profile-link" to="/settings/">
                           <div className="profile-img-container">
                             <div className="profile-image-wrapper">
                               <div className="profile-button-size-controller">
@@ -106,7 +106,7 @@ const AuthedHeader = () => {
                               </div>
                             </div>
                           </div>
-                        </a>
+                        </Link>
                       </div>
                     </div>
 
