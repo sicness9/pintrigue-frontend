@@ -41,6 +41,11 @@ export const Container = styled.div`
       cursor: pointer;
       border: none;
       transition: background-color 0.2s ease-in-out;
+      text-decoration: none;
+
+      a:link {
+        text-decoration: none;
+      }
     }
 
     &:hover {
@@ -88,24 +93,33 @@ export const PopoutContainer = styled.div`
           display: block;
           width: 100%;
 
-          .home-btn {
-            background-color: #fff;
-            width: 100%;
-            height: 35px;
-            display: flex;
-            justify-content: flex-start;
-            border: none;
-            border-radius: 6px;
-            align-items: center;
-            transition: background-color 0.2s;
+          .home-link {
+            text-decoration: none;
 
-            &:hover {
-              background-color: #efefef;
-            }
-
-            .popout-option-text {
+            .home-btn {
+              background-color: #fff;
+              width: 100%;
+              height: 35px;
+              display: flex;
+              justify-content: flex-start;
+              border: none;
+              border-radius: 6px;
+              align-items: center;
+              transition: background-color 0.2s;
+              cursor: pointer;
+              text-decoration: none;
               font-size: 16px;
               font-weight: bold;
+
+              &:hover {
+                background-color: #efefef;
+              }
+
+              .popout-option-text {
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+              }
             }
           }
         }
@@ -114,24 +128,29 @@ export const PopoutContainer = styled.div`
           display: block;
           width: 100%;
 
-          .today-btn {
-            background-color: #fff;
-            width: 100%;
-            height: 35px;
-            display: flex;
-            justify-content: flex-start;
-            border: none;
-            border-radius: 6px;
-            align-items: center;
-            transition: background-color 0.2s;
+          .today-link {
+            text-decoration: none;
 
-            &:hover {
-              background-color: #efefef;
-            }
+            .today-btn {
+              background-color: #fff;
+              width: 100%;
+              height: 35px;
+              display: flex;
+              justify-content: flex-start;
+              border: none;
+              border-radius: 6px;
+              align-items: center;
+              transition: background-color 0.2s;
+              cursor: pointer;
 
-            .popout-option-text {
-              font-size: 16px;
-              font-weight: bold;
+              &:hover {
+                background-color: #efefef;
+              }
+
+              .popout-option-text {
+                font-size: 16px;
+                font-weight: bold;
+              }
             }
           }
         }
