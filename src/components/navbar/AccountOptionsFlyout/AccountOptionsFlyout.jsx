@@ -18,8 +18,6 @@ const AccountOptionsFlyout = (props) => {
   const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
 
-  console.log("User info: ", user);
-
   const logOut = () => {
     dispatch(clearToken());
     dispatch(setAuthed(false));
@@ -120,7 +118,11 @@ const AccountOptionsFlyout = (props) => {
                   </div>
                   <div className="menuitem-settings-container">
                     <div className="settings-space-controller">
-                      <a className="settings-link" href="#">
+                      <Link
+                        className="settings-link"
+                        to="/settings/"
+                        onClick={() => props.setOpen(false)}
+                      >
                         <div className="settings-link-direction-controller">
                           <div className="settings-link-space-controller">
                             <div className="settings-more-space-controller">
@@ -132,7 +134,7 @@ const AccountOptionsFlyout = (props) => {
                             </div>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="menuitem-logout-container">
