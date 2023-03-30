@@ -45,14 +45,18 @@ const HomeTodayPopout = () => {
             <div className="popout-space-controller">
               <div className="popout-options-container">
                 <div className="popout-home-option-container">
-                  <button className="home-btn">
-                    <div className="popout-option-text">Home</div>
-                  </button>
+                  <Link className="home-link" to="/user-home">
+                    <button className="home-btn" onClick={handleClose}>
+                      <div className="popout-option-text">Home</div>
+                    </button>
+                  </Link>
                 </div>
                 <div className="popout-today-option-container">
-                  <button className="today-btn">
-                    <div className="popout-option-text">Today</div>
-                  </button>
+                  <Link className="today-link">
+                    <button className="today-btn" onClick={handleClose}>
+                      <div className="popout-option-text">Today</div>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
