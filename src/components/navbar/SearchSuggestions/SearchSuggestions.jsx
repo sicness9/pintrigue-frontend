@@ -18,7 +18,14 @@ const SearchSuggestions = (props) => {
           params: { category: props.category },
         })
         .then((res) => {
-          setData(res.data[0]);
+          console.log("Response: ", res.data);
+          if (res.data.length > 1) {
+            setData(res.data[1]);
+          } else if (res.data.length > 2) {
+            setData(res.data[2]);
+          } else {
+            setData(res.data[0]);
+          }
         });
     }
   }, [props.category]);
@@ -37,7 +44,7 @@ const SearchSuggestions = (props) => {
                 <div
                   className="suggestion-background-img"
                   style={{
-                    backgroundImage: `url(${process.env.REACT_APP_CDN_URL}${data.image_id})`,
+                    backgroundImage: `url(${process.env.REACT_APP_CDN_URL}${data?.image_id})`,
                   }}
                 ></div>
                 <div className="suggestion-title-container">
