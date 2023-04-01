@@ -35,7 +35,7 @@ export const Container = styled.div`
       /* background-color: ${(props) => (props.open ? "#111" : "#fff")}; */
       background-color: transparent;
       color: ${(props) => (props.open ? "#fff" : "#111")};
-      font-weight: bold;
+      font-weight: 500;
       font-size: 16px;
       text-align: center;
       cursor: pointer;
@@ -93,33 +93,65 @@ export const PopoutContainer = styled.div`
           display: block;
           width: 100%;
 
-          .home-link {
+          a.active {
+            width: 100%;
+            height: 35px;
+            display: flex;
+            justify-content: flex-start;
+            border: none;
+            border-radius: 6px;
+            align-items: center;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
             text-decoration: none;
 
-            .home-btn {
-              background-color: #fff;
-              width: 100%;
-              height: 35px;
-              display: flex;
-              justify-content: flex-start;
-              border: none;
-              border-radius: 6px;
-              align-items: center;
-              transition: background-color 0.2s;
-              cursor: pointer;
-              text-decoration: none;
+            .popout-option-text {
               font-size: 16px;
-              font-weight: bold;
+              font-weight: 500;
+              padding-left: 5px;
+              display: flex;
+              align-items: center;
+              text-decoration: none;
 
-              &:hover {
-                background-color: #efefef;
+              a.active {
+                align-items: center;
               }
 
-              .popout-option-text {
-                font-size: 16px;
-                font-weight: bold;
-                text-decoration: none;
+              .nav-checkmark {
+                margin-left: 75px;
+                height: 16px;
               }
+            }
+          }
+
+          .home-btn {
+            background-color: #fff;
+            width: 100%;
+            height: 35px;
+            display: flex;
+            justify-content: flex-start;
+            border: none;
+            border-radius: 6px;
+            align-items: center;
+            transition: background-color 0.2s;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+
+            &:hover {
+              background-color: #efefef;
+            }
+
+            .popout-option-text {
+              font-size: 16px;
+              font-weight: 500;
+              padding-left: 5px;
+              display: flex;
+              align-items: center;
+              text-decoration: none;
             }
           }
         }
@@ -149,7 +181,7 @@ export const PopoutContainer = styled.div`
 
               .popout-option-text {
                 font-size: 16px;
-                font-weight: bold;
+                font-weight: 500;
               }
             }
           }
