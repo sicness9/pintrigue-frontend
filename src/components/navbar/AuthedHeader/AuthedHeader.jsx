@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 //components
@@ -40,9 +40,9 @@ const AuthedHeader = () => {
                   </div>
                   <div className="home-today-btn-container">
                     <div className="home-btn-container">
-                      <Link to="/user-home">
-                        <button className="nav-home-btn">Home</button>
-                      </Link>
+                      <NavLink className="nav-home-btn" to="/user-home">
+                        <div className="home-btn-text">Home</div>
+                      </NavLink>
                     </div>
                     <div className="today-btn-container">
                       <button className="nav-today-btn">Today</button>
