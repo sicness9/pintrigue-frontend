@@ -13,8 +13,8 @@ const UploadImageThumbnail = (props) => {
   const dispatch = useDispatch();
 
   const removePin = () => {
-    props.setImage("");
-    props.setThumbnail("");
+    props.setImage(null);
+    props.setThumbnail(null);
     dispatch(removePinFromFeed(props.thumbnail.src));
   };
 
