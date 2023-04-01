@@ -11,7 +11,6 @@ export const Wrapper = styled.div`
 
 export const Content = styled.nav`
   box-sizing: border-box;
-  display: block;
 
   .header-background {
     box-sizing: border-box;
@@ -62,6 +61,8 @@ export const Content = styled.nav`
 
             .home-today-btn-container {
               display: flex;
+              justify-content: center;
+              align-items: center;
 
               @media only screen and (max-width: 850px) {
                 display: none;
@@ -70,14 +71,16 @@ export const Content = styled.nav`
               .home-btn-container {
                 height: 48px;
                 min-width: 60px;
-                flex: 0 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
 
-                .nav-home-btn {
+                a.active {
                   border-radius: 24px;
                   width: 100%;
                   cursor: pointer;
                   text-decoration: none;
-                  white-space: nowrap;
                   height: 48px;
                   padding-left: 16px;
                   padding-right: 16px;
@@ -86,6 +89,35 @@ export const Content = styled.nav`
                   border: none;
                   font-size: 16px;
                   font-weight: bold;
+                  text-align: center;
+
+                  &:hover {
+                    background-color: black;
+                  }
+                }
+
+                .nav-home-btn {
+                  border-radius: 24px;
+                  width: 100%;
+                  cursor: pointer;
+                  text-decoration: none;
+                  height: 48px;
+                  padding-left: 16px;
+                  padding-right: 16px;
+                  background-color: transparent;
+                  color: black;
+                  border: none;
+                  font-size: 16px;
+                  font-weight: bold;
+                  text-align: center;
+
+                  &:hover {
+                    background: var(--greyHover);
+                  }
+
+                  .home-btn-text {
+                    margin-top: 14px;
+                  }
                 }
               }
 
