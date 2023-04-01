@@ -4,7 +4,7 @@ export const GlobalStyles = createGlobalStyle`
     :root {
         --primary-color: #E60023;
         --colorRedHovered: #ad081b;
-        --greyHover: #ddd
+        --greyHover: #f5f5f5
     }
 
     * {
