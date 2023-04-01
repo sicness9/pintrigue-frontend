@@ -362,6 +362,7 @@ export const PinBuilderBlueprintStyles = styled.div`
               outline: none;
               font-size: 16px;
               user-select: text;
+              resize: none;
             }
           }
 
