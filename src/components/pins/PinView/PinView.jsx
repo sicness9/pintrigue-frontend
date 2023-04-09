@@ -31,7 +31,7 @@ const PinView = () => {
       .then((res) => res.data)
       .then((data) => setPin(data))
       .catch((error) => {
-        console.log(error);
+        console.log("Error fetching pin for ID: ", pinId, error);
       });
   }, []);
 
