@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
+// mutations
+import { useSearchPinMutation } from "../../../slices/pinApiSlice";
 
 // components
 import Pin from "../../pins/Pin/Pin";
