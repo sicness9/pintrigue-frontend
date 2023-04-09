@@ -17,10 +17,12 @@ import tempUser from "../../../images/temp-user-profile.svg";
 
 // redux
 import { addPinToFeed } from "../../../slices/pinFeedSlice";
+import { useAddPinMutation } from "../../../slices/pinApiSlice";
 
 const PinBuilderBlueprint = (props) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.value);
+  const [addPin, { isLoading }] = useAddPinMutation();
   const isMounted = useRef(false);
 
   // handles pin category state
@@ -128,7 +130,7 @@ const PinBuilderBlueprint = (props) => {
   };
 
   // handles pin creation
-  const createPin = (event) => {
+  const createPin = async (event) => {
     // event.preventDefault();
     const formData = new FormData();
     formData.append("image_id", image, image.file);
@@ -137,10 +139,8 @@ const PinBuilderBlueprint = (props) => {
     formData.append("category", pinCategory);
     formData.append("postedby", user.username);
 
-    axios
-      .post(`http://127.0.0.1:8000/api/pins/create_pin/`, formData, {
-        header: { "Content-Type": "multipart/form-data" },
-      })
+    const res = await addPin(formData)
+      .unwrap()
       .then((res) => {
         setNewlyMadePin(res.data);
         // console.log("response ", res);
