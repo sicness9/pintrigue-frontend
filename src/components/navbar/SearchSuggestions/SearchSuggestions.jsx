@@ -21,8 +21,8 @@ const SearchSuggestions = (props) => {
           console.log("Response: ", res.data);
           if (res.data.length > 1) {
             setData(res.data[1]);
-          } else if (res.data.length > 2) {
-            setData(res.data[2]);
+          } else if (res.data.length > 3) {
+            setData(res.data[3]);
           } else {
             setData(res.data[0]);
           }
