@@ -27,7 +27,7 @@ const PinView = () => {
   useEffect(() => {
     const pinId = window.location.pathname.split("/")[2];
     axios
-      .get(`${process.env.REACT_APP_API_URL}/pins/search-by-id/${pinId}`)
+      .get(`${import.meta.env.VITE_API_URL}/pins/id/${pinId}`)
       .then((res) => res.data)
       .then((data) => setPin(data))
       .catch((error) => {
@@ -77,7 +77,7 @@ const PinView = () => {
                       height={"568px"}
                       width={"320px"}
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${pin.image_id}`,
+                        url: `${import.meta.env.VITE_CDN_URL}${pin.image_id}`,
                       }}
                     />
                   </div>
