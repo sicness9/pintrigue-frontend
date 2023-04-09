@@ -11,13 +11,13 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "create-react-app": "^5.0.1",
+    "dotenv": "^16.0.3",
     "moment": "^2.29.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-dropzone": "^14.2.1",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.4.2",
-    "react-scripts": "^5.0.1",
     "react-search-autocomplete": "^6.1.3",
     "react-spring": "^9.4.4",
     "react-use-measure": "^2.1.1",
@@ -27,6 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "vite": "vite --open",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,5 +50,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.2.1",
+    "vite-plugin-svgr": "^2.4.0"
   }
 }
