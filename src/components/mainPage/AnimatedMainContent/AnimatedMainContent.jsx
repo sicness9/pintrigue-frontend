@@ -162,27 +162,27 @@ const AnimatedMainContent = (props) => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}1.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}1.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}2.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}2.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}3.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}3.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}4.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}4.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}5.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}5.webp`,
                       }}
                     />
                   </Suspense>
@@ -206,27 +206,27 @@ const AnimatedMainContent = (props) => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}6.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}6.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}7.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}7.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}8.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}8.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}9.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}9.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}10.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}10.webp`,
                       }}
                     />
                   </Suspense>
@@ -250,27 +250,27 @@ const AnimatedMainContent = (props) => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}11.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}11.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}12.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}12.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}13.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}13.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}14.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}14.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}15.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}15.webp`,
                       }}
                     />
                   </Suspense>
@@ -294,27 +294,27 @@ const AnimatedMainContent = (props) => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}16.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}16.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}17.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}17.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}18.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}18.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}19.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}19.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}20.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}20.webp`,
                       }}
                     />
                   </Suspense>
@@ -338,27 +338,27 @@ const AnimatedMainContent = (props) => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}21.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}21.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}22.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}22.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}23.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}23.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}24.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}24.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}25.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}25.webp`,
                       }}
                     />
                   </Suspense>
@@ -382,27 +382,27 @@ const AnimatedMainContent = (props) => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}26.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}26.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}27.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}27.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}28.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}28.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}29.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}29.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}30.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}30.webp`,
                       }}
                     />
                   </Suspense>
@@ -426,27 +426,27 @@ const AnimatedMainContent = (props) => {
                   <Suspense fallback={<div>Loading...</div>}>
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}31.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}31.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}32.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}32.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}33.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}33.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}34.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}34.webp`,
                       }}
                     />
                     <Pin
                       image_id={{
-                        url: `${process.env.REACT_APP_CDN_URL}${item}35.webp`,
+                        url: `${import.meta.env.VITE_CDN_URL}${item}35.webp`,
                       }}
                     />
                   </Suspense>
