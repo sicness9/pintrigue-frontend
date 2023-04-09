@@ -11,8 +11,6 @@ import { useFetchPopularCategories } from "../../../hooks/useFetchPopularCategor
 const PopoutSuggestionBox = (props) => {
   const data = useFetchPopularCategories();
 
-  console.log("Popular Categories: ", data);
-
   return (
     <PopoutSuggestionBoxStyles>
       <div className="suggestion-box-container">
