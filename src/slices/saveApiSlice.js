@@ -18,4 +18,4 @@ export const saveApiSlice = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useAddSaveMutation } = saveApiSlice;
+export const { useAddSaveMutation, useRemoveSaveMutation } = saveApiSlice;
