@@ -59,6 +59,7 @@ const UserHomeGrid = (props) => {
           </Link>
         ))}
       </div>
+      {isLoading && <div>Loading...</div>}
     </AnimatedGrid>
   );
 };
