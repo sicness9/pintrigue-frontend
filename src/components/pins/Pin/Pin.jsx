@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PinStyles } from "./Pin.styles";
 
 const Pin = (props) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <PinStyles>
       <div
