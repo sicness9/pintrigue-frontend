@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const DarkenBackgroundStyles = styled.div`
-  /* visibility: ${(props) =>
-    props.suggestionMenuOpen ? "visible" : "hidden"}; */
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 500;
   box-sizing: border-box;
