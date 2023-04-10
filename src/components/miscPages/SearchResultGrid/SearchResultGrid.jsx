@@ -58,7 +58,7 @@ const SearchResultGrid = (props) => {
             <Pin
               key={index}
               image_id={{
-                url: `${process.env.REACT_APP_CDN_URL}${item.image_id}`,
+                url: `${import.meta.env.VITE_CDN_URL}${item.image_id}`,
               }}
             />
           </Link>
