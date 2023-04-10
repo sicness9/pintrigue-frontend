@@ -29,6 +29,7 @@ const SearchBar = (props) => {
 
   console.log("Suggestions: ", suggestions);
 
+  // listen for when user clicks outside the pop out suggestion box and close it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
