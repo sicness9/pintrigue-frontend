@@ -11,7 +11,7 @@ import Pin from "../../pins/Pin/Pin";
 import { AnimatedGrid } from "./SearchResultGrid.styles";
 
 const SearchResultGrid = (props) => {
-  const [items, set] = useState([]); // Data will be the query I run to get the data
+  const [items, set] = useState([]); // Data will be the result of the query
   const [category, setCategory] = useState(props.category);
   const [posted_by, setPosted_by] = useState("");
   const [searchPin, { isLoading }] = useSearchPinMutation();
