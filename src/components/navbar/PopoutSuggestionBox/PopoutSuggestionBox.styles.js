@@ -58,10 +58,7 @@ export const PopoutSuggestionBoxStyles = styled.div`
             flex-direction: row;
 
             .header-title-text {
-              -webkit-line-clamp: 1;
               text-align: left;
-              -webkit-box-orient: vertical;
-              display: -webkit-box;
               max-width: 100%;
               overflow: hidden;
               word-break: break-word;
