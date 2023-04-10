@@ -1,4 +1,5 @@
 // Pin component
+import { useState } from "react";
 
 import { PinStyles } from "./Pin.styles";
 
