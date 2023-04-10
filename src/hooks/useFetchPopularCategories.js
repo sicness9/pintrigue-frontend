@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+
+// mutation
+import { useGetPopularPinCategoriesMutation } from "../slices/pinApiSlice";
 
 export const useFetchPopularCategories = () => {
   const [pins, setPins] = useState([]);
+  const [getPopularPinCategories] = useGetPopularPinCategoriesMutation();
 
   useEffect(() => {
     let APICall = true;
     if (APICall) {
-      axios
-        .get("http://127.0.0.1:8000/api/pins/popular-pins", {
-          params: { limit: 9 },
-        })
+      getPopularPinCategories()
+        .unwrap()
         .then((res) => {
-          setPins(res.data);
+          setPins(res);
         });
     }
     return () => {
