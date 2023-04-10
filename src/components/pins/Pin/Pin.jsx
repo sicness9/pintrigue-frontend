@@ -3,6 +3,9 @@ import { useState } from "react";
 
 import { PinStyles } from "./Pin.styles";
 
+// components
+import DarkenPinOverlay from "../DarkenPinOverlay/DarkenPinOverlay";
+
 const Pin = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
