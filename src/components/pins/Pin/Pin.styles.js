@@ -22,19 +22,14 @@ export const PinStyles = styled.div`
       cursor: pointer;
 
       .pin {
-        background-color: transparent;
         position: relative;
-
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 100%;
         width: 100%;
         cursor: pointer;
-
-        &:hover {
-          opacity: 0.8;
-        }
+        position: relative;
       }
     }
   }
