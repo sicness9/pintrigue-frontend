@@ -9,6 +9,10 @@ export const saveApiSlice = apiSlice.injectEndpoints({
         body: { posted_by, user_id, pin_id },
       }),
     }),
+    removeSave: builder.mutation({
+      query: ({ saveId }) => ({
+        url: `/saves/${saveId}`,
+        method: "DELETE",
       }),
     }),
   }),
