@@ -29,7 +29,11 @@ const Pin = (props) => {
               height: props.height,
               width: props.width,
             }}
-          ></div>
+            onMouseOver={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {isHovered && <DarkenPinOverlay />}
+          </div>
         </div>
       </div>
     </PinStyles>
