@@ -17,8 +17,8 @@ const UserHomeGrid = (props) => {
   const [searchPin, { isLoading }] = useSearchPinMutation();
   let page = 0;
 
-  const loadMorePins = async () => {
-    await searchPin({ category, posted_by, page })
+  const loadMorePins = () => {
+    searchPin({ category, posted_by, page })
       .unwrap()
       .then((res) => {
         console.log("Checking response", res);
