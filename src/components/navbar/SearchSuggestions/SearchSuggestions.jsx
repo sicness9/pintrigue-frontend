@@ -44,7 +44,9 @@ const SearchSuggestions = (props) => {
                 <div
                   className="suggestion-background-img"
                   style={{
-                    backgroundImage: `url(${process.env.REACT_APP_CDN_URL}${data?.image_id})`,
+                    backgroundImage: `url(${import.meta.env.VITE_CDN_URL}${
+                      data?.image_id
+                    })`,
                   }}
                 ></div>
                 <div className="suggestion-title-container">
