@@ -64,6 +64,7 @@ export const PopoutSuggestionBoxStyles = styled.div`
               word-break: break-word;
               word-wrap: break-word;
               font-weight: 400;
+              padding-left: 20px;
             }
           }
 
