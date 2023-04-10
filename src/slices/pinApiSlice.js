@@ -22,6 +22,12 @@ export const pinApiSlice = apiSlice.injectEndpoints({
         params: { category, posted_by, page },
       }),
     }),
+    getPopularPinCategories: builder.mutation({
+      query: () => ({
+        url: "/pins/popular-pins",
+        method: "GET",
+      }),
+    }),
   }),
 });
 
@@ -29,4 +35,5 @@ export const {
   useAddPinMutation,
   useGetAllPinsMutation,
   useSearchPinMutation,
+  useGetPopularPinCategoriesMutation,
 } = pinApiSlice;
