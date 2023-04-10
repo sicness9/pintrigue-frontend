@@ -2,8 +2,8 @@
 import { Wrapper } from "./ModalUnauthedView.styles";
 
 // icons
-import logo from "../../../images/logo.svg";
-import closeButton from "../../../images/close-button.svg";
+import logo from "../../../assets/logo.svg";
+import closeButton from "../../../assets/close-button.svg";
 
 const ModalUnauthedView = (props) => {
   const handleLoginClick = (e) => {

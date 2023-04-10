@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { Wrapper, AnimatedPopoutMenu } from "./AccountOptionsFlyout.styles";
 
 // images
-import checkMark from "../../../images/checkmark.svg";
+import checkMark from "../../../assets/checkmark.svg";
 
 // state
 import { clearToken } from "../../../slices/tokenSlice";

@@ -3,8 +3,8 @@ import { useContext } from "react";
 // styles
 import { Wrapper, Container } from "./SearchButton.styles";
 
-// icon
-import searchIcon from "../../../images/search-logo.svg";
+// assets
+import searchIcon from "../../../assets/search-logo.svg";
 
 // context
 import { SuggestionContext } from "../../../Context/SuggestionContext";

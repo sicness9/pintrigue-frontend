@@ -1,9 +1,9 @@
 //styles
 import { CommentSectionContainer } from "./CommentSection.styles";
 
-// icons
-import menuArrow from "../../../images/menu-arrow.svg";
-import menuArrowSide from "../../../images/menu-arrow-side.svg";
+// assets
+import menuArrow from "../../../assets/menu-arrow.svg";
+import menuArrowSide from "../../../assets/menu-arrow-side.svg";
 
 const CommentSection = (props) => {
   const comments = props.comments;

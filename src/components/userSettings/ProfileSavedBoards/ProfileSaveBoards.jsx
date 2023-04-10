@@ -1,11 +1,11 @@
 // components
 import PinBoardPreview from "../PinBoardPreview/PinBoardPreview";
 
-// images
-import darkFilter from "../../../images/filter-dark.svg";
-import lightFilter from "../../../images/filter-light.svg";
-import addSign from "../../../images/add-sign.svg";
-import addSignLight from "../../../images/add-sign-white.svg";
+// assets
+import darkFilter from "../../../assets/filter-dark.svg";
+import lightFilter from "../../../assets/filter-light.svg";
+import addSign from "../../../assets/add-sign.svg";
+import addSignLight from "../../../assets/add-sign-white.svg";
 
 // styles
 import { SavedBoardsContainer } from "./ProfileSaveBoards.styles";

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Wrapper, PopoutWindowContent } from "./PopoutAddPinWindow.styles";
 
 //images
-import addSign from "../../../images/add-sign.svg";
+import addSign from "../../../assets/add-sign.svg";
 
 const PopoutAddPinWindow = () => {
   return (

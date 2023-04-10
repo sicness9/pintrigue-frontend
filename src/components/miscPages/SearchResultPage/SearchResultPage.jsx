@@ -5,7 +5,7 @@ import UserHomeFooter from "../../footers/UserHomeFooter/UserHomeFooter";
 // styles
 import { Wrapper } from "./SearchResultPage.styles";
 
-const SearchResultPage = (props) => {
+const SearchResultPage = () => {
   const params = new URLSearchParams(document.location.search);
   console.log("Search Result Page", params);
   let category = params.get("category");

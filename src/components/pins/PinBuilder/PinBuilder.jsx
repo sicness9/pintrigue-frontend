@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useDispatch } from "react-redux";
 
-// state managemtn
+// state management
 import { resetPinFeed } from "../../../slices/pinFeedSlice";
 
 // components
@@ -41,7 +41,10 @@ const PinBuilder = () => {
 
   // appends a new pin builder to the view
   const createPinBuilderBlueprint = () => {
-    setComponents([...components, <PinBuilderBlueprint />]);
+    setComponents((prevComponents) => [
+      ...prevComponents,
+      <PinBuilderBlueprint />,
+    ]);
   };
 
   // creates a new pin creation window
@@ -77,7 +80,9 @@ const PinBuilder = () => {
               {cancelPageActive && <div className="under-button"></div>}
             </div>
           </div>
-          {components}
+          {components.map((component, idx) => (
+            <div key={idx}>{component}</div>
+          ))}
         </PinBuilderContent>
       </Wrapper>
       <AddPinSidePanel />

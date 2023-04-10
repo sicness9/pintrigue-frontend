@@ -10,11 +10,11 @@ import HomeTodayPopout from "../HomeTodayPopout/HomeTodayPopout";
 // styles
 import { Wrapper, Content } from "./AuthedHeader.styles";
 
-// images
-import logo from "../../../images/logo.svg";
-import notificationBell from "../../../images/notification-bell.svg";
-import inbox from "../../../images/inbox.svg";
-import menuArrow from "../../../images/menu-arrow.svg";
+// assets
+import logo from "../../../assets/logo.svg";
+import notificationBell from "../../../assets/notification-bell.svg";
+import inbox from "../../../assets/inbox.svg";
+import menuArrow from "../../../assets/menu-arrow.svg";
 
 // context
 import { SuggestionContext } from "../../../Context/SuggestionContext";

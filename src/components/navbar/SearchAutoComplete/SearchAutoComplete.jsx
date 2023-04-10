@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 // styles
 import { AutoCompleteList } from "./SearchAutoComplete.styles";
 
-// icons
-import searchLogo from "../../../images/search-logo.svg";
+// assets
+import searchLogo from "../../../assets/search-logo.svg";
 
 const SearchAutoComplete = (props) => {
   const handleClick = (e) => {

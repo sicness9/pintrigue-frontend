@@ -9,8 +9,8 @@ import { CreatePinContext } from "../../../Context/newPinContext";
 // styles
 import { Wrapper, Content, Divider } from "./AddPinSidePanel.styles";
 
-// icons
-import addSign from "../../../images/add-sign.svg";
+// assets
+import addSign from "../../../assets/add-sign.svg";
 
 const AddPinSidePanel = () => {
   const [newPin, setNewPin] = useContext(CreatePinContext);

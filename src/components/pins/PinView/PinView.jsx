@@ -8,14 +8,14 @@ import Pin from "../Pin/Pin";
 // styles
 import { PinViewContainer, PinViewContent } from "./PinView.styles";
 
-// icons
-import menu from "../../../images/black-ellipsis.svg";
-import back from "../../../images/back-arrow.svg";
-import fullscreen from "../../../images/resize-arrows.svg";
-import unfilledHeart from "../../../images/like-image-unfilled.svg";
-import filledHeart from "../../../images/like-image-filled.svg";
-import userProfileImage from "../../../images/noimage-icon.svg";
-import menuArrow from "../../../images/menu-arrow.svg";
+// assets
+import menu from "../../../assets/black-ellipsis.svg";
+import back from "../../../assets/back-arrow.svg";
+import fullscreen from "../../../assets/resize-arrows.svg";
+import unfilledHeart from "../../../assets/like-image-unfilled.svg";
+import filledHeart from "../../../assets/like-image-filled.svg";
+import userProfileImage from "../../../assets/noimage-icon.svg";
+import menuArrow from "../../../assets/menu-arrow.svg";
 
 const CommentSection = lazy(() => import("../CommentSection/CommentSection"));
 

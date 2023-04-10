@@ -3,8 +3,8 @@ import { useState, useEffect, useRef } from "react";
 import { Wrapper, FooterContent } from "./UserHomeFooter.styles";
 
 // images
-import addSign from "../../../images/add-sign.svg";
-import aboutusSign from "../../../images/aboutus-sign.svg";
+import addSign from "../../../assets/add-sign.svg";
+import aboutusSign from "../../../assets/aboutus-sign.svg";
 
 // components
 import PopoutAddPinWindow from "../PopoutAddPinWindow/PopoutAddPinWindow";

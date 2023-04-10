@@ -3,7 +3,7 @@ import Header from "../../navbar/Header/Header";
 import { ContentWrapper } from "./UnauthedView.styles";
 
 // gif
-import gif from "../../../images/this-is-fine.gif";
+import gif from "../../../assets/this-is-fine.gif";
 
 const UnauthedView = () => {
   return (

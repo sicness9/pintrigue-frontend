@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { ThumbnailStyles } from "./UploadImageThumbnail.styles";
 
 // icons
-import trashCan from "../../../images/trashcan.svg";
+import trashCan from "../../../assets/trashcan.svg";
 
 // state
 import { removePinFromFeed } from "../../../slices/pinFeedSlice";

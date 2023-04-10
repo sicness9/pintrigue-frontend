@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Wrapper } from "./ModalSignupView.styles";
 
 // icons
-import logo from "../../../images/logo.svg";
-import closeButton from "../../../images/close-button.svg";
+import logo from "../../../assets/logo.svg";
+import closeButton from "../../../assets/close-button.svg";
 
 // state management
 import { useSignupMutation } from "../../../slices/userApiSlice";

@@ -3,7 +3,7 @@ import { PageScrollArrowStyle } from "./PageScrollArrrow.styles";
 import { useSpring } from "react-spring";
 
 // images
-import arrowImage from "../../../images/page-arrow.svg";
+import arrowImage from "../../../assets/page-arrow.svg";
 
 const PageScrollArrow = () => {
   const styles = useSpring({

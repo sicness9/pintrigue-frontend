@@ -1,8 +1,8 @@
 // styles
 import { FeedPin } from "./PinForFeed.styles";
 
-// icons
-import noImage from "../../../images/noimage-icon.svg";
+// assets
+import noImage from "../../../assets/noimage-icon.svg";
 
 const PinForFeed = (props) => {
   return (

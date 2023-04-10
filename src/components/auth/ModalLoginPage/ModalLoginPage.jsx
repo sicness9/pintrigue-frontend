@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { ModalLoginPageStyles } from "./ModalLoginPage.styles";
 
 // icons
-import logo from "../../../images/logo.svg";
-import closeButton from "../../../images/close-button.svg";
+import logo from "../../../assets/logo.svg";
+import closeButton from "../../../assets/close-button.svg";
 
 // state management
 import { setAuthed } from "../../../slices/authedSlice";

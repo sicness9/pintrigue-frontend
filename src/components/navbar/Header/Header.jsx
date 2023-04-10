@@ -5,8 +5,8 @@ import { useState } from "react";
 //styles
 import { Content } from "./Header.styles";
 
-// images
-import logo from "../../../images/logo.svg";
+// assets
+import logo from "../../../assets/logo.svg";
 
 //components
 import Modal from "../../auth/Modal/Modal";

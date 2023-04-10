@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 // styles
 import { SearchBarStyles } from "./SearchBar.styles";
 
-// images
-import searchLogo from "../../../images/search-logo.svg";
+// assets
+import searchLogo from "../../../assets/search-logo.svg";
 
 // components
 import PopoutSuggestionBox from "../PopoutSuggestionBox/PopoutSuggestionBox";

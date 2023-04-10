@@ -4,10 +4,10 @@ import { Link, NavLink } from "react-router-dom";
 // styles
 import { Wrapper, Container, PopoutContainer } from "./HomeTodayPopout.styles";
 
-// image
-import whiteMenuArrow from "../../../images/menu-arrow-white.svg";
-import blackMenuArrow from "../../../images/menu-arrow.svg";
-import checkMark from "../../../images/checkmark.svg";
+// assets
+import whiteMenuArrow from "../../../assets/menu-arrow-white.svg";
+import blackMenuArrow from "../../../assets/menu-arrow.svg";
+import checkMark from "../../../assets/checkmark.svg";
 
 const HomeTodayPopout = () => {
   const [open, setOpen] = useState(false);

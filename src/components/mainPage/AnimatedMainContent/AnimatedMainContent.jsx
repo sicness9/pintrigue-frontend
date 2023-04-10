@@ -1,7 +1,6 @@
 // animated main content for home page
 
 import { Suspense, lazy } from "react";
-
 import { animated, useTransition } from "react-spring";
 
 // styles

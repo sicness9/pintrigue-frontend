@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "axios";
 
 // components
 import RestartPopout from "../RestartPopout/RestartPopout";
@@ -9,11 +8,11 @@ import UploadImageThumbnail from "../UploadImageThumbnail/UploadImageThumbnail";
 // styles
 import { PinBuilderBlueprintStyles } from "./PinBuilderBlueprint.styles";
 
-// icons
-import menu from "../../../images/ellipsis.svg";
-import arrow from "../../../images/menu-arrow.svg";
-import upload from "../../../images/upload.svg";
-import tempUser from "../../../images/temp-user-profile.svg";
+// assets
+import menu from "../../../assets/ellipsis.svg";
+import arrow from "../../../assets/menu-arrow.svg";
+import upload from "../../../assets/upload.svg";
+import tempUser from "../../../assets/temp-user-profile.svg";
 
 // redux
 import { addPinToFeed } from "../../../slices/pinFeedSlice";
