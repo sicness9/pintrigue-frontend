@@ -70,14 +70,14 @@ const SearchBar = (props) => {
   return (
     <>
       <SearchButton />
-      <SearchBarStyles style={{ display: openSuggestion && "block" }} ref={ref}>
+      <SearchBarStyles style={{ display: openSuggestion && "block" }}>
         <div className="nav-search-container">
           <div className="nav-search-item-container">
             <div className="search-logo-container">
               <img className="search-logo" src={searchLogo} alt="search" />
             </div>
             <input
-              // ref={ref}
+              ref={ref}
               autoCapitalize="off"
               autoComplete="off"
               autoCorrect="off"
