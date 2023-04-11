@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 // API mutations
 import { useSearchPinMutation } from "../../../slices/pinApiSlice";
 
 // components
-import Pin from "../../pins/Pin/Pin";
+import Pin from "../../../components/pins/Pin/Pin";
 
 // styles
 import { AnimatedGrid } from "./UserHomeGrid.styles";
@@ -49,14 +48,15 @@ const UserHomeGrid = (props) => {
     <AnimatedGrid>
       <div className="grid-container">
         {items.map((item, index) => (
-          <Link to={`/pin/${item.pin_id}`} key={index}>
-            <Pin
-              key={index}
-              image_id={{
-                url: `${import.meta.env.VITE_CDN_URL}${item.image_id}`,
-              }}
-            />
-          </Link>
+          // <Link to={`/pin/${item.pin_id}`} key={index}>
+          <Pin
+            key={index}
+            pin_id={item.pin_id}
+            image_id={{
+              url: `${import.meta.env.VITE_CDN_URL}${item.image_id}`,
+            }}
+          />
+          // </Link>
         ))}
       </div>
       {isLoading && <div>Loading...</div>}

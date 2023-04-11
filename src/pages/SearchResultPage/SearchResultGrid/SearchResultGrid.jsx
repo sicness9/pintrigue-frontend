@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useSearchPinMutation } from "../../../slices/pinApiSlice";
 
 // components
-import Pin from "../../pins/Pin/Pin";
+import Pin from "../../../components/pins/Pin/Pin";
 
 // styles
 import { AnimatedGrid } from "./SearchResultGrid.styles";

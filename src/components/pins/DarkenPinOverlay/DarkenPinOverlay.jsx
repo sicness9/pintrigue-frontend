@@ -4,10 +4,10 @@ import SaveButton from "../SaveButton/SaveButton";
 // styles
 import { OverlayStyle } from "./DarkenPinOverlay.styles";
 
-const DarkenPinOverlay = () => {
+const DarkenPinOverlay = (props) => {
   return (
-    <OverlayStyle>
-      <SaveButton />
+    <OverlayStyle href={`/pin/${props.pin_id}`}>
+      {/* <SaveButton /> */}
     </OverlayStyle>
   );
 };

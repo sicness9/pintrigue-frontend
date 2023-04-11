@@ -7,7 +7,7 @@ export const useFetchPins = () => {
   useEffect(() => {
     let APICall = true;
     if (APICall) {
-      axios.get("http://127.0.0.1:8000/api/pins/").then((res) => {
+      axios.get(`${import.meta.env.VITE_API_URL}/pins/`).then((res) => {
         setPins(res.data.pins);
       });
       return () => {

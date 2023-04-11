@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { resetPinFeed } from "../../../slices/pinFeedSlice";
 
 // components
-import UserHomeFooter from "../../footers/UserHomeFooter/UserHomeFooter";
+import UserHomeFooter from "../../../UI/footer/UserHomeFooter/UserHomeFooter";
 import AddPinSidePanel from "../AddPinSidePanel/AddPinSidePanel";
 import PinBuilderBlueprint from "../PinBuilderBlueprint/PinBuilderBlueprint";
 

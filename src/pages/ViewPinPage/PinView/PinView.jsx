@@ -2,7 +2,7 @@ import { useState, useEffect, Suspense, lazy } from "react";
 import axios from "axios";
 
 // components
-import Pin from "../Pin/Pin";
+import Pin from "../../../components/pins/Pin/Pin";
 // import CommentSection from "../CommentSection/CommentSection";
 
 // styles

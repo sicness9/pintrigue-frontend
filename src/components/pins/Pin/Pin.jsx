@@ -6,6 +6,7 @@ import { PinStyles } from "./Pin.styles";
 
 // components
 import DarkenPinOverlay from "../DarkenPinOverlay/DarkenPinOverlay";
+import SaveButton from "../SaveButton/SaveButton";
 
 const Pin = (props) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -25,7 +26,11 @@ const Pin = (props) => {
             height: props.height,
             width: props.width,
           }}
+          onMouseOver={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
+          {isHovered && <DarkenPinOverlay pin_id={props.pin_id} />}
+          {isHovered && <SaveButton />}
           <div
             className="pin"
             role="img"
@@ -34,11 +39,7 @@ const Pin = (props) => {
               height: props.height,
               width: props.width,
             }}
-            onMouseOver={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            {isHovered && <DarkenPinOverlay />}
-          </div>
+          ></div>
         </div>
       </div>
     </PinStyles>

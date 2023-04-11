@@ -2,16 +2,16 @@ import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 // components
-import Main from "./components/mainPage/Main/Main";
-import SignedInUserHome from "./components/users/SignedInUserHome/SignedInUserHome";
-import PinBuilder from "./components/pins/PinBuilder/PinBuilder";
-import SearchResultPage from "./components/miscPages/SearchResultPage/SearchResultPage";
-import PinView from "./components/pins/PinView/PinView";
-import UnauthedView from "./components/miscPages/UnauthedView/UnauthedView";
-import AuthedHeader from "./components/navbar/AuthedHeader/AuthedHeader";
-import Header from "./components/navbar/Header/Header";
+import Main from "./pages/LandingPage/Main/Main";
+import SignedInUserHome from "./pages/UserHomePage/SignedInUserHome/SignedInUserHome";
+import PinBuilder from "./pages/AddPinPage/PinBuilder/PinBuilder";
+import SearchResultPage from "./pages/SearchResultPage/SearchResultPage/SearchResultPage";
+import PinView from "./pages/ViewPinPage/PinView/PinView";
+import UnauthedView from "./pages/UnauthedPage/UnauthedView/UnauthedView";
+import AuthedHeader from "./UI/navigation/AuthedHeader/AuthedHeader";
+import Header from "./UI/navigation/Header/Header";
 import RequireAuth from "./components/RequireAuth";
-import ProfileSettings from "./components/userSettings/ProfileSettings/ProfileSettings";
+import ProfileSettings from "./pages/SettingsPage/ProfileSettings/ProfileSettings";
 
 // context
 import SuggestionContextProvider from "./Context/SuggestionContext";

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 
 // components
-import TempUserImage from "../../RandomComponents/TempUserImage/TempUserImage";
+import TempUserImage from "../../../components/RandomComponents/TempUserImage/TempUserImage";
 import ProfileSaveBoards from "../ProfileSavedBoards/ProfileSaveBoards";
 
 // styles

@@ -1,6 +1,6 @@
 // components
 import UserHomeGrid from "../UserHomeGrid/UserHomeGrid";
-import UserHomeFooter from "../../footers/UserHomeFooter/UserHomeFooter";
+import UserHomeFooter from "../../../UI/footer/UserHomeFooter/UserHomeFooter";
 
 //styles
 import { Wrapper } from "./SignedInUserHome.styles";

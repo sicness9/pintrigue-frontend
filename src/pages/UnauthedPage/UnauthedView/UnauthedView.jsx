@@ -1,4 +1,4 @@
-import Header from "../../navbar/Header/Header";
+import Header from "../../../UI/navigation/Header/Header";
 
 import { ContentWrapper } from "./UnauthedView.styles";
 

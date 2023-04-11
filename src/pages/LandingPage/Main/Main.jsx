@@ -16,7 +16,7 @@ import {
 // components
 import AnimatedMainContent from "../AnimatedMainContent/AnimatedMainContent";
 import BottomFade from "../BottomFade/BottomFade";
-import SignupModalInspired from "../../auth/SignupModalInspired/SignupModalInspired";
+import SignupModalInspired from "../../../components/auth/SignupModalInspired/SignupModalInspired";
 
 const Main = () => {
   const listOfItems = [

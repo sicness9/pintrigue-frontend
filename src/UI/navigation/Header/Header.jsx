@@ -9,7 +9,7 @@ import { Content } from "./Header.styles";
 import logo from "../../../assets/logo.svg";
 
 //components
-import Modal from "../../auth/Modal/Modal";
+import Modal from "../../../components/auth/Modal/Modal";
 
 const Header = () => {
   const [open, setOpen] = useState(false);

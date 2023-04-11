@@ -8,7 +8,7 @@ export const SaveButtonStyles = styled.button`
   position: absolute;
   border: none;
   border-radius: 27px;
-  z-index: 100;
+  z-index: 500;
   cursor: pointer;
 
   &:hover {
