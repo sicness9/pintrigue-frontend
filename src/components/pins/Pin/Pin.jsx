@@ -16,11 +16,13 @@ import {
 } from "../../../slices/saveApiSlice";
 
 const Pin = (props) => {
+  // state used to show/hide button and filter over the pin
   const [isHovered, setIsHovered] = useState(false);
   // state of user's saved pins
   const [savedPins, setSavedPins] = useState([]);
   // is the current pin on user's saved pin list
   const [isSaved, setIsSaved] = useState(false);
+
   // queries to handle the save button
   const [addSave, { isLoading }] = useAddSaveMutation();
   const [removeSave] = useRemoveSaveMutation();
