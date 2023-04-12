@@ -54,14 +54,13 @@ const SearchResultGrid = (props) => {
     <AnimatedGrid>
       <div className="grid-container">
         {items.map((item, index) => (
-          <Link key={index} to={`/pin/${item.pin_id}`}>
-            <Pin
-              key={index}
-              image_id={{
-                url: `${import.meta.env.VITE_CDN_URL}${item.image_id}`,
-              }}
-            />
-          </Link>
+          <Pin
+            key={index}
+            pin_id={item.pin_id}
+            image_id={{
+              url: `${import.meta.env.VITE_CDN_URL}${item.image_id}`,
+            }}
+          />
         ))}
       </div>
     </AnimatedGrid>
