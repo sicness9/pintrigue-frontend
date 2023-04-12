@@ -20,7 +20,6 @@ const UserHomeGrid = (props) => {
     searchPin({ category, posted_by, page })
       .unwrap()
       .then((res) => {
-        console.log("Checking response", res);
         const newPins = [];
         res.pins.forEach((pin) => {
           newPins.push(pin);
@@ -48,15 +47,14 @@ const UserHomeGrid = (props) => {
     <AnimatedGrid>
       <div className="grid-container">
         {items.map((item, index) => (
-          // <Link to={`/pin/${item.pin_id}`} key={index}>
           <Pin
             key={index}
             pin_id={item.pin_id}
+            posted_by={item.posted_by}
             image_id={{
               url: `${import.meta.env.VITE_CDN_URL}${item.image_id}`,
             }}
           />
-          // </Link>
         ))}
       </div>
       {isLoading && <div>Loading...</div>}
