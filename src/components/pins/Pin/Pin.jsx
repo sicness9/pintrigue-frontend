@@ -70,7 +70,10 @@ const Pin = (props) => {
           onMouseLeave={() => setIsHovered(false)}
         >
           {isHovered && <DarkenPinOverlay pin_id={props.pin_id} />}
-          {isHovered && <SaveButton />}
+          {isHovered && !isSaved && (
+            <SaveButton pin_id={props.pin_id} posted_by={props.posted_by} />
+          )}
+          {isHovered && isSaved && <UnsaveButton />}
           <div
             className="pin"
             role="img"
