@@ -1,0 +1,24 @@
+import styled from "styled-components";
+
+export const UnsaveButtonStyles = styled.button`
+  height: 50px;
+  width: 65px;
+  margin: 10px 0 0 165px;
+  background-color: black;
+  position: absolute;
+  border: none;
+  border-radius: 27px;
+  z-index: 500;
+  cursor: pointer;
+  /* 
+  &:hover {
+    background-color: var(--colorRedHovered);
+    transition: background-color 0.1s;
+  } */
+
+  .btn-text {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+  }
+`;
