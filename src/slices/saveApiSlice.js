@@ -15,7 +15,18 @@ export const saveApiSlice = apiSlice.injectEndpoints({
         method: "DELETE",
       }),
     }),
+    getAllSaves: builder.mutation({
+      query: ({ user_id }) => ({
+        url: "/saves/",
+        method: "GET",
+        params: { user_id },
+      }),
+    }),
   }),
 });
 
-export const { useAddSaveMutation, useRemoveSaveMutation } = saveApiSlice;
+export const {
+  useAddSaveMutation,
+  useRemoveSaveMutation,
+  useGetAllSavesMutation,
+} = saveApiSlice;
