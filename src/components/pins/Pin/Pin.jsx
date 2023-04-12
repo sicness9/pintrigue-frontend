@@ -8,6 +8,8 @@ import { PinStyles } from "./Pin.styles";
 // components
 import DarkenPinOverlay from "../DarkenPinOverlay/DarkenPinOverlay";
 import SaveButton from "../SaveButton/SaveButton";
+import UnsaveButton from "../UnsaveButton/UnsaveButton";
+
 // mutations
 import {
   useAddSaveMutation,
@@ -53,19 +55,9 @@ const Pin = (props) => {
 
   return (
     <PinStyles>
-      <div
-        className="home-pin"
-        style={{
-          height: props.height,
-          width: props.width,
-        }}
-      >
+      <div className="home-pin">
         <div
           className="pin-height-controller"
-          style={{
-            height: props.height,
-            width: props.width,
-          }}
           onMouseOver={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -79,8 +71,6 @@ const Pin = (props) => {
             role="img"
             style={{
               backgroundImage: `url(${props.image_id.url})`,
-              height: props.height,
-              width: props.width,
             }}
           ></div>
         </div>
