@@ -38,6 +38,19 @@ const Pin = (props) => {
       .then((res) => setSavedPins(res));
   }, []);
 
+  // set saved state if user_id found in array
+  useEffect(() => {
+    // find entry with matching pin_id and user_id
+    const isFound = savedPins.find(
+      (save) => save.user_id === user.user_id && save.pin_id === props.pin_id
+    );
+    if (isFound !== undefined) {
+      setIsSaved(true);
+    } else {
+      setIsSaved(false);
+    }
+  }, [savedPins]);
+
   return (
     <PinStyles>
       <div
