@@ -31,6 +31,13 @@ const Pin = (props) => {
   // current signed in user
   const user = useSelector((state) => state.user.value);
 
+  // on initial page load, get all of the signed in user's saved pins
+  useEffect(() => {
+    getAllSaves({ user_id: user.user_id })
+      .unwrap()
+      .then((res) => setSavedPins(res));
+  }, []);
+
   return (
     <PinStyles>
       <div
