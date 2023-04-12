@@ -21,6 +21,11 @@ const Pin = (props) => {
   const [savedPins, setSavedPins] = useState([]);
   // is the current pin on user's saved pin list
   const [isSaved, setIsSaved] = useState(false);
+  // queries to handle the save button
+  const [addSave, { isLoading }] = useAddSaveMutation();
+  const [removeSave] = useRemoveSaveMutation();
+  const [getAllSaves] = useGetAllSavesMutation();
+
   // current signed in user
   const user = useSelector((state) => state.user.value);
 
