@@ -1,5 +1,5 @@
 // Pin component
-import { useState } from "react";
+import { useSelector } from "react-redux";
 
 // styles
 import { PinStyles } from "./Pin.styles";
@@ -10,6 +10,8 @@ import SaveButton from "../SaveButton/SaveButton";
 
 const Pin = (props) => {
   const [isHovered, setIsHovered] = useState(false);
+  // current signed in user
+  const user = useSelector((state) => state.user.value);
 
   return (
     <PinStyles>
