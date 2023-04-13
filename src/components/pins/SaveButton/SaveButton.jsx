@@ -25,7 +25,7 @@ const SaveButton = (props) => {
   };
 
   return (
-    <SaveButtonStyles>
+    <SaveButtonStyles onClick={savePin}>
       <div className="btn-text">Save</div>
     </SaveButtonStyles>
   );
