@@ -24,6 +24,8 @@ const Pin = (props) => {
   const [savedPins, setSavedPins] = useState([]);
   // is the current pin on user's saved pin list
   const [isSaved, setIsSaved] = useState(false);
+  // state that holds the save ID used to remove the save
+  const [saveId, setSaveId] = useState(null);
 
   // queries to handle the save button
   const [addSave, { isLoading }] = useAddSaveMutation();
