@@ -66,7 +66,11 @@ const Pin = (props) => {
         >
           {isHovered && <DarkenPinOverlay pin_id={props.pin_id} />}
           {isHovered && !isSaved && (
-            <SaveButton pin_id={props.pin_id} posted_by={props.posted_by} />
+            <SaveButton
+              pin_id={props.pin_id}
+              posted_by={props.posted_by}
+              setIsSaved={setIsSaved}
+            />
           )}
           {isHovered && isSaved && <UnsaveButton />}
           <div
