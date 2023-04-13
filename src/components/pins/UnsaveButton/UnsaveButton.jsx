@@ -19,7 +19,7 @@ const UnsaveButton = (props) => {
   };
 
   return (
-    <UnsaveButtonStyles>
+    <UnsaveButtonStyles onClick={unSavePin}>
       <div className="btn-text">Saved</div>
     </UnsaveButtonStyles>
   );
