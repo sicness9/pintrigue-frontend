@@ -50,6 +50,7 @@ const Pin = (props) => {
     );
     if (isFound !== undefined) {
       setIsSaved(true);
+      setSaveId(isFound.save_id);
     } else {
       setIsSaved(false);
     }
