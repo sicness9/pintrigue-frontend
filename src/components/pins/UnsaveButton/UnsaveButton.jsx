@@ -7,7 +7,10 @@ import {
 // styles
 import { UnsaveButtonStyles } from "./UnsaveButton.styles";
 
-const UnsaveButton = () => {
+const UnsaveButton = (props) => {
+  const [getAllSaves] = useGetAllSavesMutation();
+  const [removeSave] = useRemoveSaveMutation();
+
   return (
     <UnsaveButtonStyles>
       <div className="btn-text">Saved</div>
