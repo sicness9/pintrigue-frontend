@@ -10,9 +10,10 @@ export const saveApiSlice = apiSlice.injectEndpoints({
       }),
     }),
     removeSave: builder.mutation({
-      query: ({ saveId }) => ({
-        url: `/saves/${saveId}`,
+      query: ({ save_id, user_id }) => ({
+        url: `/saves/${save_id}`,
         method: "DELETE",
+        body: { user_id },
       }),
     }),
     getAllSaves: builder.mutation({
