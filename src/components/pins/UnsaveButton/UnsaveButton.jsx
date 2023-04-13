@@ -11,6 +11,13 @@ const UnsaveButton = (props) => {
   const [getAllSaves] = useGetAllSavesMutation();
   const [removeSave] = useRemoveSaveMutation();
 
+  const unSavePin = () => {
+    removeSave({ save_id: props.saveId, user_id: props.currentUser })
+      .unwrap()
+      .then(getAllSaves({ user_id: props.currentUser }))
+      .then(props.setIsSaved(false));
+  };
+
   return (
     <UnsaveButtonStyles>
       <div className="btn-text">Saved</div>
