@@ -72,7 +72,13 @@ const Pin = (props) => {
               setIsSaved={setIsSaved}
             />
           )}
-          {isHovered && isSaved && <UnsaveButton />}
+          {isHovered && isSaved && (
+            <UnsaveButton
+              saveId={saveId}
+              currentUser={user.user_id}
+              setIsSaved={setIsSaved}
+            />
+          )}
           <div
             className="pin"
             role="img"
