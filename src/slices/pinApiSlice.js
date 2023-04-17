@@ -28,6 +28,12 @@ export const pinApiSlice = apiSlice.injectEndpoints({
         method: "GET",
       }),
     }),
+    getPinById: builder.mutation({
+      query: ({ pinId }) => ({
+        url: `/pins/${pinId}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
@@ -36,4 +42,5 @@ export const {
   useGetAllPinsMutation,
   useSearchPinMutation,
   useGetPopularPinCategoriesMutation,
+  useGetPinByIdMutation,
 } = pinApiSlice;
