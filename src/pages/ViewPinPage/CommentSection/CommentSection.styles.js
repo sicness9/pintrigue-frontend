@@ -7,6 +7,7 @@ export const CommentSectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 17px;
 
   .comments-header-container {
     width: 100%;
