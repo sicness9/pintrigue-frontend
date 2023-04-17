@@ -36,7 +36,9 @@ const CommentSection = (props) => {
                 <div key={i} className="comment">
                   <div className="poster_image">
                     <img
-                      src={`${process.env.REACT_APP_CDN_URL}${comment.posted_by.image_id}`}
+                      src={`${import.meta.env.VITE_CDN_URL}${
+                        comment.posted_by.image_id
+                      }`}
                       alt="poster profile pic"
                       className="poster_image_pic"
                     />
