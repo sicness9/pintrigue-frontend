@@ -52,12 +52,20 @@ const CommentSection = (props) => {
             </div>
           )}
           <div className="hide-n-show-button-container">
-            <button className="hide-n-show-button">
-              <img
-                className="hide-comment-image"
-                src={menuArrow}
-                alt="hide and show button"
-              />
+            <button className="hide-n-show-button" onClick={handleClick}>
+              {isShown ? (
+                <img
+                  className="hide-comment-image"
+                  src={menuArrow}
+                  alt="hide and show button"
+                />
+              ) : (
+                <img
+                  className="hide-comment-image"
+                  src={menuArrowSide}
+                  alt="hide and show button"
+                />
+              )}
             </button>
           </div>
         </div>
