@@ -6,6 +6,8 @@ import { CommentSectionContainer } from "./CommentSection.styles";
 // assets
 import menuArrow from "../../../assets/menu-arrow.svg";
 import menuArrowSide from "../../../assets/menu-arrow-side.svg";
+import unfilledLikeHeart from "../../../assets/unfilled-like-grey.svg";
+import filledLikeHeart from "../../../assets/like-image-filled.svg";
 
 const CommentSection = (props) => {
   const [isShown, setIsShown] = useState(true);
