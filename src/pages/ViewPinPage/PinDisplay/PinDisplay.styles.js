@@ -9,10 +9,13 @@ export const DisplayedPinStyles = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 1250px) {
+    height: 550px;
+  }
+
   .pin-shape-controller {
     height: 100%;
     width: 100%;
-    /* border-radius: 30px 0 0; */
     overflow: hidden;
 
     .pin {
