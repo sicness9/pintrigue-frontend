@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 //styles
 import { CommentSectionContainer } from "./CommentSection.styles";
 
@@ -6,8 +8,13 @@ import menuArrow from "../../../assets/menu-arrow.svg";
 import menuArrowSide from "../../../assets/menu-arrow-side.svg";
 
 const CommentSection = (props) => {
+  const [isShown, setIsShown] = useState(true);
   const comments = props.comments;
 
+  // hides/shows comments section
+  const handleClick = () => {
+    setIsShown((prevState) => !prevState);
+  };
 
   // function to get time difference between now and date comment was made
   const getTimeDifference = (commentDate) => {
