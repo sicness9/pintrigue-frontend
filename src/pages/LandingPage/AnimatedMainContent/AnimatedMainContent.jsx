@@ -6,7 +6,9 @@ import { animated, useTransition } from "react-spring";
 // styles
 import { AnimatedMainContentStyles } from "./AnimatedMainContent.styles";
 
-const Pin = lazy(() => import("../../../components/pins/Pin/Pin"));
+const Pin = lazy(() =>
+  import("../../../pages/LandingPage/LandingPagePin/LandingPagePin")
+);
 
 const AnimatedMainContent = (props) => {
   const animationDuraton = 400;
