@@ -69,31 +69,48 @@ const CommentSection = (props) => {
             </button>
           </div>
         </div>
-        <div className="comments-container">
-          {comments &&
-            comments.map((comment, i) => {
-              return (
-                <div key={i} className="comment">
-                  <div className="poster_image">
-                    <img
-                      src={`${import.meta.env.VITE_CDN_URL}${
-                        comment.posted_by.image_id
-                      }`}
-                      alt="poster profile pic"
-                      className="poster_image_pic"
-                    />
-                  </div>
+        {isShown && (
+          <div className="comments-container">
+            {comments &&
+              comments.map((comment, i) => {
+                return (
+                  <div key={i} className="comment">
+                    <div className="poster_image">
+                      <img
+                        src={`${import.meta.env.VITE_CDN_URL}${
+                          comment.posted_by.image_id
+                        }`}
+                        alt="poster profile pic"
+                        className="poster_image_pic"
+                      />
+                    </div>
 
-                  <div className="comment-message">
-                    <span className="commenter-name">
-                      {comment.posted_by.username}
-                    </span>
-                    {comment.comment}
+                    <div className="comment-message">
+                      <div className="comment-user-container">
+                        <span className="commenter-name">
+                          {comment.posted_by.username}
+                        </span>
+                        {comment.comment}
+                      </div>
+
+                      <div className="comment-detail-functions">
+                        <div className="post-date">
+                          {formatTimeDifference(comment.created_at)}
+                        </div>
+                        <button className="reply-btn">
+                          <div className="reply-btn-text">Reply</div>
+                        </button>
+                        <button className="comment-like-btn">
+                          <img src={unfilledLikeHeart} />
+                          <div className="comment-likes">{comment.likes}</div>
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-        </div>
+                );
+              })}
+          </div>
+        )}
       </CommentSectionContainer>
     </>
   );
