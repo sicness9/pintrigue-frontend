@@ -8,6 +8,29 @@ import menuArrowSide from "../../../assets/menu-arrow-side.svg";
 const CommentSection = (props) => {
   const comments = props.comments;
 
+
+  // function to get time difference between now and date comment was made
+  const getTimeDifference = (commentDate) => {
+    var date1 = new Date();
+    var date2 = new Date(commentDate);
+    var timeDifference = date1.getTime() - date2.getTime();
+    var differenceInDays = timeDifference / (1000 * 3600 * 24);
+    return Math.floor(differenceInDays);
+  };
+
+  // formats the result of time difference to display under the comment
+  const formatTimeDifference = (commentDate) => {
+    const timeDifference = getTimeDifference(commentDate);
+
+    if (timeDifference < 30) {
+      return timeDifference + "d";
+    } else if (timeDifference >= 30 && timeDifference <= 364) {
+      return Math.floor(timeDifference / 30) + "mo";
+    } else {
+      return Math.floor(timeDifference / 365) + "y";
+    }
+  };
+
   return (
     <>
       <CommentSectionContainer>
