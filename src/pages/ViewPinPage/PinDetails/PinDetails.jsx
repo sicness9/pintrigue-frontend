@@ -41,6 +41,18 @@ const PinDetails = (props) => {
     }
   }, [props.pin]);
 
+  // modify how number of likes is shown
+  const formatLikes = (likes) => {
+    if (likes <= 999) {
+      return `${likes}`;
+    } else if (likes > 999 && likes <= 999999) {
+      return `${String(likes).charAt(0)}k`;
+    } else {
+      return `${String(likes).charAt(0)}M`;
+    }
+  };
+
+  // user likes pin
   return (
     <PinDetailsStyles>
       <div className="pin-other-content-header-container">
