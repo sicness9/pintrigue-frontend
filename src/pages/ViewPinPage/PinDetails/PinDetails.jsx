@@ -84,7 +84,9 @@ const PinDetails = (props) => {
             <img className="pins-likes-image" src={filledHeart} alt="likes" />
           </div>
           <div className="pin-like-details-container">
-            <div className="pin-like-details-text">You and 28k others</div>
+            <div className="pin-like-details-text">
+              {formatLikes(props.pin.likes)}
+            </div>
           </div>
         </div>
         <div className="pin-title-container">
