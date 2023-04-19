@@ -11,7 +11,6 @@ export const PinDetailsStyles = styled.div`
   padding-right: 32px;
   background-color: white;
   padding-bottom: 10px;
-  overflow-y: auto;
 
   @media screen and (max-width: 1250px) {
     width: 90%;
