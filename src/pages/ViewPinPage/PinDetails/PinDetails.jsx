@@ -1,6 +1,12 @@
 import { useEffect, useState, Suspense, lazy } from "react";
 import { useSelector } from "react-redux";
 
+// mutations
+import {
+  useLikePinMutation,
+  useUnLikePinMutation,
+} from "../../../slices/pinApiSlice";
+
 // assets
 import menu from "../../../assets/black-ellipsis.svg";
 import back from "../../../assets/back-arrow.svg";
@@ -20,6 +26,10 @@ const PinDetails = (props) => {
   const [comments, setComments] = useState([]);
   // current user
   const user = useSelector((state) => state.user.value);
+  // api call to add like pin
+  const [likePin] = useLikePinMutation();
+  // api call to unlike pin
+  const [unLikePin] = useUnLikePinMutation();
 
   useEffect(() => {
     if (props.pin) {
