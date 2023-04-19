@@ -30,6 +30,8 @@ const PinDetails = (props) => {
   const [likePin] = useLikePinMutation();
   // api call to unlike pin
   const [unLikePin] = useUnLikePinMutation();
+  // does user like the current pin
+  const [isLiked, setIsLiked] = useState(false);
 
   useEffect(() => {
     if (props.pin) {
