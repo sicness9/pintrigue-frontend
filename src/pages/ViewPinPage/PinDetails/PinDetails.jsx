@@ -33,6 +33,7 @@ const PinDetails = (props) => {
   // does user like the current pin
   const [isLiked, setIsLiked] = useState(false);
 
+  //  grab all comments for the current pin
   useEffect(() => {
     if (props.pin) {
       setComments(props.pin.comments);
