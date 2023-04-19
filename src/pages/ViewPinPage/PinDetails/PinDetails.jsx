@@ -1,4 +1,5 @@
 import { useEffect, useState, Suspense, lazy } from "react";
+import { useSelector } from "react-redux";
 
 // assets
 import menu from "../../../assets/black-ellipsis.svg";
@@ -17,6 +18,8 @@ const CommentSection = lazy(() => import("../CommentSection/CommentSection"));
 const PinDetails = (props) => {
   // array containing comments for the pin
   const [comments, setComments] = useState([]);
+  // current user
+  const user = useSelector((state) => state.user.value);
 
   useEffect(() => {
     if (props.pin) {
