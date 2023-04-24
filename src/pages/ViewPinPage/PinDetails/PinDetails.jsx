@@ -22,14 +22,14 @@ import { PinDetailsStyles } from "./PinDetails.styles";
 const CommentSection = lazy(() => import("../CommentSection/CommentSection"));
 
 const PinDetails = (props) => {
+  // api mutations
+  const [likePin] = useLikePinMutation();
+  const [unLikePin] = useUnLikePinMutation();
+
   // array containing comments for the pin
   const [comments, setComments] = useState([]);
   // current user
   const user = useSelector((state) => state.user.value);
-  // api call to add like pin
-  const [likePin] = useLikePinMutation();
-  // api call to unlike pin
-  const [unLikePin] = useUnLikePinMutation();
   // does user like the current pin
   const [isLiked, setIsLiked] = useState(false);
 
@@ -54,6 +54,12 @@ const PinDetails = (props) => {
   };
 
   // user likes pin
+  const handleLike = () => {
+    likePin({ pinId: props.pin.pin_id, userId: user.user_id });
+    setIsLiked(true);
+  };
+
+  // const handleUnLike = () => {
   return (
     <PinDetailsStyles>
       <div className="pin-other-content-header-container">
