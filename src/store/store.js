@@ -8,7 +8,6 @@ import loadingReducer from "../slices/loadingSlice";
 import tokenReducer from "../slices/tokenSlice";
 import userReducer from "../slices/userSlice";
 import authedReducer from "../slices/authedSlice";
-import pinFeedReducer from "../slices/pinFeedSlice";
 import { apiSlice } from "../app/api/apiSlice";
 import authReducer from "../slices/authSlice";
 
