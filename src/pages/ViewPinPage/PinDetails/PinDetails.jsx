@@ -70,13 +70,24 @@ const PinDetails = (props) => {
             </button>
           </div>
           <div className="pin-like-btn-container">
-            <button className="pin-like-btn">
-              <img
-                className="like-btn-img"
-                src={unfilledHeart}
-                alt="like button"
-              />
-            </button>
+            {!isLiked && (
+              <button className="pin-like-btn" onClick={handleLike}>
+                <img
+                  className="like-btn-img"
+                  src={unfilledHeart}
+                  alt="like button"
+                />
+              </button>
+            )}
+            {isLiked && (
+              <button className="pin-like-btn">
+                <img
+                  className="like-btn-img"
+                  src={filledHeart}
+                  alt="like button"
+                />
+              </button>
+            )}
           </div>
         </div>
         <div className="save-button-container">
