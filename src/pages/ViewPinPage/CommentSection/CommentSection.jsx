@@ -95,7 +95,9 @@ const CommentSection = (props) => {
 
                       <div className="comment-detail-functions">
                         <div className="post-date">
-                          {formatTimeDifference(comment.created_at)}
+                          {formatTimeDifference(comment.created_at) === "0d"
+                            ? "Today"
+                            : formatTimeDifference(comment.created_at)}
                         </div>
                         <button className="reply-btn">
                           <div className="reply-btn-text">Reply</div>
