@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import {
   useLikePinMutation,
   useUnLikePinMutation,
-} from "../../../slices/pinApiSlice";
+} from "../../../slices/likeApiSlice";
 
 // assets
 import menu from "../../../assets/black-ellipsis.svg";
